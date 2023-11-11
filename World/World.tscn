@@ -16,7 +16,7 @@ offset_bottom = 272.0
 color = Color(1, 0.768627, 1, 1)
 
 [node name="StaticCat" parent="Level" instance=ExtResource("1_8gfck")]
-position = Vector2(-137, -44)
+position = Vector2(-137, -50)
 
 [node name="Camera2D" type="Camera2D" parent="Level"]
 zoom = Vector2(3.525, 3.525)
@@ -46,4 +46,4 @@ scale = Vector2(0.425, 1)
 position = Vector2(-115, -25)
 
 [node name="Ball" parent="Level/Environment/Dynamic" instance=ExtResource("3_oh1xf")]
-position = Vector2(9, 0)
+position = Vector2(4, 0)
