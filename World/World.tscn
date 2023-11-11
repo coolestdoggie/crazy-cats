@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://c42fqx8kandh8"]
+
+[ext_resource type="PackedScene" uid="uid://c02hoc5wj15nx" path="res://Cats/Cat.tscn" id="1_8gfck"]
+
+[node name="World" type="Node2D"]
+
+[node name="Level" type="Node2D" parent="."]
+
+[node name="Background" type="ColorRect" parent="Level"]
+offset_left = -475.0
+offset_top = -270.0
+offset_right = 483.0
+offset_bottom = 272.0
+color = Color(1, 0.768627, 1, 1)
+
+[node name="StaticCat" parent="Level" instance=ExtResource("1_8gfck")]
+
+[node name="Camera2D" type="Camera2D" parent="Level"]
+zoom = Vector2(3.525, 3.525)
