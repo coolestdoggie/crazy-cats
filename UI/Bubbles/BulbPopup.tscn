@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://rf06mats4d52"]
+
+[ext_resource type="Texture2D" uid="uid://cmjpmnbfldhsm" path="res://UI/Bubbles/BubbleEmotes.png" id="1_ff7fi"]
+[ext_resource type="Script" path="res://UI/Bubbles/BulbPopup.gd" id="1_pju5h"]
+
+[node name="BulbPopup" type="Node2D" node_paths=PackedStringArray("bulb_sprite")]
+script = ExtResource("1_pju5h")
+bulb_sprite = NodePath("BulbPopup")
+
+[node name="BulbPopup" type="Sprite2D" parent="."]
+position = Vector2(6, -9)
+texture = ExtResource("1_ff7fi")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(176, 32, 16, 16)
