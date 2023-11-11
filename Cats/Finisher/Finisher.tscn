@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://h7ki5opejbw4"]
+[gd_scene load_steps=24 format=3 uid="uid://h7ki5opejbw4"]
 
 [ext_resource type="Script" path="res://Cats/Finisher/Finisher.gd" id="1_grg67"]
 [ext_resource type="Texture2D" uid="uid://b211705w1bqnd" path="res://Cats/Images/kitty.png" id="2_14kvl"]
 [ext_resource type="PackedScene" uid="uid://rf06mats4d52" path="res://UI/Bubbles/BulbPopup.tscn" id="3_ivbio"]
+[ext_resource type="PackedScene" uid="uid://b7mab3dwu7ykn" path="res://UI/Bubbles/TextPopup.tscn" id="4_ncxry"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r5xlv"]
 bounce = 0.4
@@ -144,13 +145,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Finisher" type="RigidBody2D" node_paths=PackedStringArray("bulb_popup")]
+[node name="Finisher" type="RigidBody2D" node_paths=PackedStringArray("bulb_popup", "text_popup")]
 physics_material_override = SubResource("PhysicsMaterial_r5xlv")
 max_contacts_reported = 1
 contact_monitor = true
 lock_rotation = true
 script = ExtResource("1_grg67")
 bulb_popup = NodePath("BulbPopup")
+text_popup = NodePath("TextPopup")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6.165)
@@ -167,5 +169,11 @@ position = Vector2(11, 7)
 target_position = Vector2(16, 0)
 
 [node name="BulbPopup" parent="." instance=ExtResource("3_ivbio")]
+
+[node name="TextPopup" parent="." instance=ExtResource("4_ncxry")]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 5.0
+offset_bottom = -2.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
