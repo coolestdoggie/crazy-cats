@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://c02hoc5wj15nx"]
 
 [ext_resource type="Texture2D" uid="uid://b211705w1bqnd" path="res://Cats/Images/kitty.png" id="1_83bqp"]
-[ext_resource type="Script" path="res://Cats/Cat.gd" id="1_dcm65"]
+[ext_resource type="Script" path="res://Cats/Pusher/Pusher.gd" id="1_o1dm8"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r5xlv"]
 bounce = 0.4
@@ -143,10 +143,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="StaticCat" type="RigidBody2D" node_paths=PackedStringArray("raycast")]
+[node name="Pusher" type="RigidBody2D" node_paths=PackedStringArray("raycast")]
 physics_material_override = SubResource("PhysicsMaterial_r5xlv")
 lock_rotation = true
-script = ExtResource("1_dcm65")
+script = ExtResource("1_o1dm8")
 raycast = NodePath("RayCast2D")
 cooldown_between_pushes = 3.0
 impulse_force = 2.5
@@ -159,7 +159,7 @@ shape = SubResource("CircleShape2D_1uj66")
 sprite_frames = SubResource("SpriteFrames_4gcbd")
 animation = &"fall_down_right"
 autoplay = "fall_down_right"
-frame_progress = 0.908978
+frame_progress = 0.911319
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(11, 7)

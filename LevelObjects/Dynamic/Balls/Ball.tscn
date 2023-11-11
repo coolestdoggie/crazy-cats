@@ -3,13 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://buuu5itidvp33" path="res://LevelObjects/Dynamic/Balls/Images/basketball.png" id="1_e4dx7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xkh0n"]
-radius = 10.0499
+radius = 6.08276
 
 [node name="Ball" type="RigidBody2D"]
-mass = 0.03
+mass = 0.4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_e4dx7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
