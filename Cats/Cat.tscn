@@ -1,6 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://c02hoc5wj15nx"]
+[gd_scene load_steps=21 format=3 uid="uid://c02hoc5wj15nx"]
 
 [ext_resource type="Texture2D" uid="uid://b211705w1bqnd" path="res://Cats/Images/kitty.png" id="1_83bqp"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r5xlv"]
+bounce = 0.4
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1uj66"]
 
@@ -139,7 +142,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="StaticCat" type="StaticBody2D"]
+[node name="StaticCat" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_r5xlv")
+lock_rotation = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6.165)
@@ -147,4 +152,10 @@ shape = SubResource("CircleShape2D_1uj66")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4gcbd")
-animation = &"idle_right"
+animation = &"fall_down_right"
+autoplay = "fall_down_right"
+frame_progress = 0.723481
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(11, 7)
+target_position = Vector2(16, 0)
