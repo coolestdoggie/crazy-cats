@@ -54,4 +54,4 @@ position = Vector2(-115, -25)
 position = Vector2(4, 0)
 
 [node name="Apple" parent="Level/Environment/Dynamic" instance=ExtResource("4_ewemv")]
-position = Vector2(164, 38)
+position = Vector2(165, 34)
