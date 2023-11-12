@@ -1,12 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://c42fqx8kandh8"]
+[gd_scene load_steps=8 format=3 uid="uid://c42fqx8kandh8"]
 
+[ext_resource type="Script" path="res://Infrastructure/StateMachine.gd" id="1_5lvt3"]
 [ext_resource type="PackedScene" uid="uid://c02hoc5wj15nx" path="res://Cats/Pusher/Pusher.tscn" id="1_8gfck"]
 [ext_resource type="PackedScene" uid="uid://vaxblbt1cguo" path="res://LevelObjects/Static/Platform/Platform.tscn" id="2_4ubo2"]
 [ext_resource type="PackedScene" uid="uid://h7ki5opejbw4" path="res://Cats/Finisher/Finisher.tscn" id="2_7i7vh"]
+[ext_resource type="Script" path="res://Infrastructure/GameStates/PlanningState.gd" id="2_82783"]
 [ext_resource type="PackedScene" uid="uid://den11gq2yc51f" path="res://LevelObjects/Dynamic/Balls/Ball.tscn" id="3_oh1xf"]
 [ext_resource type="PackedScene" uid="uid://ddbex485bhdmx" path="res://LevelObjects/Dynamic/Food/Apple.tscn" id="4_ewemv"]
 
 [node name="World" type="Node2D"]
+
+[node name="GameStateMachine" type="Node2D" parent="."]
+script = ExtResource("1_5lvt3")
+initial_state = NodePath("PlanningState")
+
+[node name="PlanningState" type="Node2D" parent="GameStateMachine"]
+script = ExtResource("2_82783")
 
 [node name="Level" type="Node2D" parent="."]
 
