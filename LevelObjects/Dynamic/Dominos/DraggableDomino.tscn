@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dq4p7eivv728p"]
+
+[ext_resource type="PackedScene" uid="uid://bdrw6yyvoo5e0" path="res://Cats/Draggable.tscn" id="1_umqe2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4sqo"]
+resource_local_to_scene = true
+size = Vector2(6, 19)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_rj66m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swnwe"]
+size = Vector2(4, 17.5)
+
+[node name="DraggableDomino" type="RigidBody2D"]
+mass = 0.4
+
+[node name="Draggable" parent="." instance=ExtResource("1_umqe2")]
+
+[node name="CollisionShape2D" parent="Draggable/Area2D" index="0"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_c4sqo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -0.25)
+scale = Vector2(4, 17.5)
+texture = SubResource("CanvasTexture_rj66m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.25)
+shape = SubResource("RectangleShape2D_swnwe")
+
+[editable path="Draggable"]
