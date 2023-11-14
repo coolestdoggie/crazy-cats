@@ -1,74 +1,27 @@
-[gd_scene load_steps=10 format=3 uid="uid://c42fqx8kandh8"]
+[gd_scene load_steps=7 format=3 uid="uid://c42fqx8kandh8"]
 
 [ext_resource type="Script" path="res://Infrastructure/StateMachine.gd" id="1_5lvt3"]
-[ext_resource type="PackedScene" uid="uid://c02hoc5wj15nx" path="res://Cats/Pusher/Pusher.tscn" id="1_8gfck"]
-[ext_resource type="PackedScene" uid="uid://vaxblbt1cguo" path="res://LevelObjects/Static/Platform/Platform.tscn" id="2_4ubo2"]
-[ext_resource type="PackedScene" uid="uid://h7ki5opejbw4" path="res://Cats/Finisher/Finisher.tscn" id="2_7i7vh"]
 [ext_resource type="Script" path="res://Infrastructure/GameStates/PlanningState.gd" id="2_82783"]
-[ext_resource type="PackedScene" uid="uid://den11gq2yc51f" path="res://LevelObjects/Dynamic/Balls/Ball.tscn" id="3_oh1xf"]
+[ext_resource type="Script" path="res://Infrastructure/GameStates/LoadLevelState.gd" id="2_md78k"]
 [ext_resource type="Script" path="res://Infrastructure/GameStates/PlayState.gd" id="3_xojuj"]
-[ext_resource type="PackedScene" uid="uid://ddbex485bhdmx" path="res://LevelObjects/Dynamic/Food/Apple.tscn" id="4_ewemv"]
+[ext_resource type="PackedScene" uid="uid://bspelakc6vbau" path="res://Levels/Level_1.tscn" id="5_m6ykv"]
 [ext_resource type="PackedScene" uid="uid://cotmb588ghw1a" path="res://UI/UI.tscn" id="8_bqpel"]
 
 [node name="World" type="Node2D"]
 
 [node name="GameStateMachine" type="Node2D" parent="."]
 script = ExtResource("1_5lvt3")
-initial_state = NodePath("PlanningState")
+initial_state = NodePath("LoadLevelState")
+
+[node name="LoadLevelState" type="Node2D" parent="GameStateMachine"]
+script = ExtResource("2_md78k")
+levels = [ExtResource("5_m6ykv")]
 
 [node name="PlanningState" type="Node2D" parent="GameStateMachine"]
 script = ExtResource("2_82783")
 
 [node name="PlayState" type="Node2D" parent="GameStateMachine"]
 script = ExtResource("3_xojuj")
-
-[node name="Level" type="Node2D" parent="."]
-
-[node name="Background" type="ColorRect" parent="Level"]
-offset_left = -475.0
-offset_top = -270.0
-offset_right = 483.0
-offset_bottom = 272.0
-color = Color(1, 0.768627, 1, 1)
-
-[node name="Pusher" parent="Level" instance=ExtResource("1_8gfck")]
-position = Vector2(-130, -47)
-
-[node name="Finisher" parent="Level" instance=ExtResource("2_7i7vh")]
-position = Vector2(110, 21)
-
-[node name="Camera2D" type="Camera2D" parent="Level"]
-zoom = Vector2(3.525, 3.525)
-
-[node name="Environment" type="Node2D" parent="Level"]
-
-[node name="Static" type="Node2D" parent="Level/Environment"]
-
-[node name="Platform" parent="Level/Environment/Static" instance=ExtResource("2_4ubo2")]
-position = Vector2(-147, -15)
-scale = Vector2(0.425, 1)
-
-[node name="Platform2" parent="Level/Environment/Static" instance=ExtResource("2_4ubo2")]
-position = Vector2(-106, -14)
-rotation = 0.415388
-scale = Vector2(0.81, 1)
-
-[node name="Platform3" parent="Level/Environment/Static" instance=ExtResource("2_4ubo2")]
-position = Vector2(-35, 17)
-scale = Vector2(1.26, 1)
-
-[node name="Platform4" parent="Level/Environment/Static" instance=ExtResource("2_4ubo2")]
-position = Vector2(97, 37)
-scale = Vector2(0.425, 1)
-
-[node name="Dynamic" type="Node2D" parent="Level/Environment"]
-position = Vector2(-115, -25)
-
-[node name="Ball" parent="Level/Environment/Dynamic" instance=ExtResource("3_oh1xf")]
-position = Vector2(4, 0)
-
-[node name="Apple" parent="Level/Environment/Dynamic" instance=ExtResource("4_ewemv")]
-position = Vector2(165, 34)
 
 [node name="UI" parent="." instance=ExtResource("8_bqpel")]
 

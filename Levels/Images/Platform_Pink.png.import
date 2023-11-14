@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkgqsd8l7rliy"
-path="res://.godot/imported/Platform_Vertical_Wood.png-f8421c05346cbe3c67a89f4a84341cac.ctex"
+uid="uid://dnbc55wldc34c"
+path="res://.godot/imported/Platform_Pink.png-8c43ab9a1c418e4139e777ef879c3726.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level/Images/Platform_Vertical_Wood.png"
-dest_files=["res://.godot/imported/Platform_Vertical_Wood.png-f8421c05346cbe3c67a89f4a84341cac.ctex"]
+source_file="res://Levels/Images/Platform_Pink.png"
+dest_files=["res://.godot/imported/Platform_Pink.png-8c43ab9a1c418e4139e777ef879c3726.ctex"]
 
 [params]
 
