@@ -38,5 +38,10 @@ text = "Play"
 layout_mode = 2
 text = "Stop"
 
+[node name="ResetButton" type="Button" parent="Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Reset"
+
 [connection signal="pressed" from="Control/MarginContainer/HBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/HBoxContainer/StopButton" to="." method="_on_stop_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/HBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]

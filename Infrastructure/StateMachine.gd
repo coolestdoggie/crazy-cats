@@ -55,3 +55,7 @@ func _on_ui_play_button_pressed():
 
 func _on_ui_stop_button_pressed():
 	transition_to("PlanningState")
+
+
+func _on_ui_reset_button_pressed():
+	transition_to("LoadLevelState")

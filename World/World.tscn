@@ -15,7 +15,7 @@ initial_state = NodePath("LoadLevelState")
 
 [node name="LoadLevelState" type="Node2D" parent="GameStateMachine"]
 script = ExtResource("2_md78k")
-levels = [ExtResource("5_m6ykv")]
+levels = Array[PackedScene]([ExtResource("5_m6ykv")])
 
 [node name="PlanningState" type="Node2D" parent="GameStateMachine"]
 script = ExtResource("2_82783")
@@ -26,4 +26,5 @@ script = ExtResource("3_xojuj")
 [node name="UI" parent="." instance=ExtResource("8_bqpel")]
 
 [connection signal="play_button_pressed" from="UI" to="GameStateMachine" method="_on_ui_play_button_pressed"]
+[connection signal="reset_button_pressed" from="UI" to="GameStateMachine" method="_on_ui_reset_button_pressed"]
 [connection signal="stop_button_pressed" from="UI" to="GameStateMachine" method="_on_ui_stop_button_pressed"]
