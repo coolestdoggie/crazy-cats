@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Cats/Finisher/TextPopup.gd" id="2_hiqeu"]
 [ext_resource type="FontFile" uid="uid://d4npeibw4v0w4" path="res://UI/Fonts/Fipps-Regular.otf" id="3_wmd81"]
 
-[node name="TextPopup" type="NinePatchRect"]
+[node name="TextPopup" type="NinePatchRect" node_paths=PackedStringArray("label")]
 offset_left = -24.0
 offset_top = -22.0
 offset_right = 24.0
@@ -17,6 +17,7 @@ patch_margin_top = 5
 patch_margin_right = 9
 patch_margin_bottom = 8
 script = ExtResource("2_hiqeu")
+label = NodePath("Label")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

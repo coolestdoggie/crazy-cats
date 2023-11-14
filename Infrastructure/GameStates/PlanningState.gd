@@ -1,4 +1,4 @@
 extends State
 
 func enter(_msg := {}) -> void:
-	print("Planning State Entered")
+	PhysicsServer2D.set_active(false)
