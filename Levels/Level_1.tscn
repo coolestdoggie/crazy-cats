@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bspelakc6vbau"]
+[gd_scene load_steps=7 format=3 uid="uid://bspelakc6vbau"]
 
 [ext_resource type="PackedScene" uid="uid://h7ki5opejbw4" path="res://Cats/Finisher/Finisher.tscn" id="2_n7g8j"]
 [ext_resource type="PackedScene" uid="uid://vaxblbt1cguo" path="res://LevelObjects/Static/Platform/Platform.tscn" id="3_xhgb3"]
 [ext_resource type="PackedScene" uid="uid://den11gq2yc51f" path="res://LevelObjects/Dynamic/Balls/Ball.tscn" id="4_34tnt"]
 [ext_resource type="PackedScene" uid="uid://ddbex485bhdmx" path="res://LevelObjects/Dynamic/Food/Apple.tscn" id="5_sssms"]
 [ext_resource type="PackedScene" uid="uid://bfmguh88h5m7h" path="res://LevelObjects/Dynamic/Dominos/Domino.tscn" id="7_bqddp"]
-[ext_resource type="PackedScene" uid="uid://dq4p7eivv728p" path="res://LevelObjects/Dynamic/Dominos/DraggableDomino.tscn" id="7_o1grs"]
-[ext_resource type="PackedScene" uid="uid://quse3s2c63dx" path="res://Cats/Pusher/DraggablePusher.tscn" id="8_xhlc6"]
+[ext_resource type="PackedScene" uid="uid://c02hoc5wj15nx" path="res://Cats/Pusher/Pusher.tscn" id="7_mq222"]
 
 [node name="Level_1" type="Node2D"]
 
@@ -19,6 +18,9 @@ color = Color(1, 0.768627, 1, 1)
 
 [node name="Finisher" parent="." instance=ExtResource("2_n7g8j")]
 position = Vector2(91, 21)
+
+[node name="Pusher" parent="." instance=ExtResource("7_mq222")]
+position = Vector2(-112, -31)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3.525, 3.525)
@@ -55,26 +57,15 @@ position = Vector2(-115, -25)
 position = Vector2(23, 3)
 
 [node name="Apple" parent="Environment/Dynamic" instance=ExtResource("5_sssms")]
-position = Vector2(171, 34)
+position = Vector2(183, 35)
 
 [node name="Domino" parent="Environment/Dynamic" instance=ExtResource("7_bqddp")]
-position = Vector2(101, 33)
+position = Vector2(103, 33)
 
 [node name="Domino2" parent="Environment/Dynamic" instance=ExtResource("7_bqddp")]
-position = Vector2(113, 33)
+position = Vector2(115, 33)
 
 [node name="Domino5" parent="Environment/Dynamic" instance=ExtResource("7_bqddp")]
-position = Vector2(146, 33)
+position = Vector2(158, 33)
 
 [node name="Inventory" type="Node2D" parent="Environment"]
-
-[node name="DraggableDomino" parent="Environment/Inventory" instance=ExtResource("7_o1grs")]
-position = Vector2(-5, 78)
-
-[node name="DraggableDomino2" parent="Environment/Inventory" instance=ExtResource("7_o1grs")]
-position = Vector2(6, 78)
-
-[node name="DraggablePusher" parent="Environment/Inventory" instance=ExtResource("8_xhlc6")]
-position = Vector2(-23, 70)
-
-[editable path="Environment/Inventory/DraggablePusher"]
