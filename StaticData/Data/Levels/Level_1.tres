@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://qn8u7wb78lwo"]
+
+[ext_resource type="Script" path="res://StaticData/Scripts/LevelStaticData.gd" id="1_udyya"]
+
+[resource]
+script = ExtResource("1_udyya")
+level_index = 0
+finish_phrase = "cat = UwU"

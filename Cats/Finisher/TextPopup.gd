@@ -1,7 +1,12 @@
 class_name TextPopup extends NinePatchRect
 
+@export var label : Label
+
 func _ready():
 	reset_animation()
+
+func set_text(text: String):
+	label.text = text
 
 func activate_bubble():
 	activate_bubble_appear_animation()

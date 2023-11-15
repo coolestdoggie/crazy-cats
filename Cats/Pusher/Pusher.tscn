@@ -149,7 +149,7 @@ lock_rotation = true
 script = ExtResource("1_o1dm8")
 raycast = NodePath("RayCast2D")
 cooldown_between_pushes = 3.0
-impulse_force = 2.5
+impulse_force = 20.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6.165)

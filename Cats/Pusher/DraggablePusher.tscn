@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://icxybbt0rqr6"]
+
+[ext_resource type="PackedScene" uid="uid://c02hoc5wj15nx" path="res://Cats/Pusher/Pusher.tscn" id="1_66iml"]
+[ext_resource type="PackedScene" uid="uid://bdrw6yyvoo5e0" path="res://Cats/Draggable.tscn" id="2_5gbou"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26o7a"]
+resource_local_to_scene = true
+
+[node name="DraggablePusher" type="Node2D"]
+
+[node name="Pusher" parent="." instance=ExtResource("1_66iml")]
+
+[node name="Draggable" parent="." instance=ExtResource("2_5gbou")]
+
+[node name="CollisionShape2D" parent="Draggable/Area2D" index="0"]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_26o7a")
+
+[editable path="Draggable"]
