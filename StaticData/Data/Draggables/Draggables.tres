@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="DraggableObjectsData" load_steps=2 format=3 uid="uid://bece7jvpki8lk"]
+
+[ext_resource type="Script" path="res://StaticData/Scripts/DraggableObjectsData.gd" id="1_f3oli"]
+
+[resource]
+script = ExtResource("1_f3oli")
+objects = {}

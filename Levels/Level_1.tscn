@@ -16,12 +16,6 @@ offset_right = 483.0
 offset_bottom = 272.0
 color = Color(1, 0.768627, 1, 1)
 
-[node name="Finisher" parent="." instance=ExtResource("2_n7g8j")]
-position = Vector2(91, 21)
-
-[node name="Pusher" parent="." instance=ExtResource("7_mq222")]
-position = Vector2(-112, -31)
-
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3.525, 3.525)
 
@@ -50,6 +44,12 @@ scale = Vector2(1.8, 1)
 position = Vector2(79, 37)
 scale = Vector2(0.425, 1)
 
+[node name="Finisher" parent="Environment/Static" instance=ExtResource("2_n7g8j")]
+position = Vector2(91, 21)
+
+[node name="Pusher" parent="Environment/Static" instance=ExtResource("7_mq222")]
+position = Vector2(-112, -31)
+
 [node name="Dynamic" type="Node2D" parent="Environment"]
 position = Vector2(-115, -25)
 
@@ -67,5 +67,3 @@ position = Vector2(115, 33)
 
 [node name="Domino5" parent="Environment/Dynamic" instance=ExtResource("7_bqddp")]
 position = Vector2(158, 33)
-
-[node name="Inventory" type="Node2D" parent="Environment"]
