@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c42fqx8kandh8"]
 
-[ext_resource type="PackedScene" uid="uid://c02hoc5wj15nx" path="res://Cats/Pusher/Pusher.tscn" id="1_8gfck"]
+[ext_resource type="PackedScene" uid="uid://ccv82pnguqfcl" path="res://Cats/Rebel/Rebel.tscn" id="1_b3wpt"]
 [ext_resource type="PackedScene" uid="uid://vaxblbt1cguo" path="res://LevelObjects/Static/Platform/Platform.tscn" id="2_4ubo2"]
 [ext_resource type="PackedScene" uid="uid://h7ki5opejbw4" path="res://Cats/Finisher/Finisher.tscn" id="2_7i7vh"]
 [ext_resource type="PackedScene" uid="uid://den11gq2yc51f" path="res://LevelObjects/Dynamic/Balls/Ball.tscn" id="3_oh1xf"]
@@ -17,8 +17,8 @@ offset_right = 483.0
 offset_bottom = 272.0
 color = Color(1, 0.768627, 1, 1)
 
-[node name="Pusher" parent="Level" instance=ExtResource("1_8gfck")]
-position = Vector2(-130, -47)
+[node name="Rebel" parent="Level" instance=ExtResource("1_b3wpt")]
+position = Vector2(-131, -48)
 
 [node name="Finisher" parent="Level" instance=ExtResource("2_7i7vh")]
 position = Vector2(110, 21)
