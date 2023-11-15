@@ -1,7 +1,10 @@
-[gd_resource type="Resource" script_class="DraggableObjectsData" load_steps=2 format=3 uid="uid://bece7jvpki8lk"]
+[gd_resource type="Resource" script_class="DraggableObjectsData" load_steps=3 format=3 uid="uid://bece7jvpki8lk"]
 
 [ext_resource type="Script" path="res://StaticData/Scripts/DraggableObjectsData.gd" id="1_f3oli"]
+[ext_resource type="PackedScene" uid="uid://cwcmr8hvcmrfo" path="res://LevelObjects/Dynamic/Dominos/DraggableDomino.tscn" id="1_sgp6x"]
 
 [resource]
 script = ExtResource("1_f3oli")
-objects = {}
+objects = {
+"domino": ExtResource("1_sgp6x")
+}

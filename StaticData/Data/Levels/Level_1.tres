@@ -5,4 +5,4 @@
 [resource]
 script = ExtResource("1_udyya")
 level_index = 0
-finish_phrase = "cat = UwU"
+draggables = {}

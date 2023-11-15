@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cotmb588ghw1a"]
+[gd_scene load_steps=4 format=3 uid="uid://cotmb588ghw1a"]
 
 [ext_resource type="Script" path="res://UI/UI.gd" id="1_cvy86"]
+[ext_resource type="Script" path="res://UI/Inventory/InventoryUI.gd" id="2_hxcdq"]
+[ext_resource type="PackedScene" uid="uid://dvvhebpv0ovkl" path="res://UI/Inventory/InventoryItem.tscn" id="2_tf6hq"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_cvy86")
@@ -13,35 +15,52 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Control"]
+[node name="ControlButtons" type="HBoxContainer" parent="Control"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -544.0
+offset_top = 17.0
+offset_right = 544.0
+offset_bottom = 48.0
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 32
-theme_override_constants/margin_top = 32
-theme_override_constants/margin_right = 32
-theme_override_constants/margin_bottom = 32
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer"]
-layout_mode = 2
 size_flags_vertical = 0
 alignment = 1
 
-[node name="PlayButton" type="Button" parent="Control/MarginContainer/HBoxContainer"]
+[node name="PlayButton" type="Button" parent="Control/ControlButtons"]
 layout_mode = 2
 text = "Play"
 
-[node name="StopButton" type="Button" parent="Control/MarginContainer/HBoxContainer"]
+[node name="StopButton" type="Button" parent="Control/ControlButtons"]
 layout_mode = 2
 text = "Stop"
 
-[node name="ResetButton" type="Button" parent="Control/MarginContainer/HBoxContainer"]
+[node name="ResetButton" type="Button" parent="Control/ControlButtons"]
 layout_mode = 2
 text = "Reset"
 
-[connection signal="pressed" from="Control/MarginContainer/HBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/HBoxContainer/StopButton" to="." method="_on_stop_button_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/HBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]
+[node name="Inventory" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -103.0
+offset_right = 100.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+script = ExtResource("2_hxcdq")
+
+[node name="InventoryItem" parent="Control/Inventory" instance=ExtResource("2_tf6hq")]
+layout_mode = 2
+
+[connection signal="pressed" from="Control/ControlButtons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Control/ControlButtons/StopButton" to="." method="_on_stop_button_pressed"]
+[connection signal="pressed" from="Control/ControlButtons/ResetButton" to="." method="_on_reset_button_pressed"]
