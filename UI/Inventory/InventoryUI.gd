@@ -25,9 +25,9 @@ func create_inventory_items_for_current_level():
 
 
 func create_inventory_item(draggable_id: String, amount: int):
-	var scene = ObjectsDataService.get_scene_by_id(draggable_id)
+	var draggable = ObjectsDataService.get_scene_by_id(draggable_id)
 
 	var inventory_item_instance = inventory_item_scene.instantiate() as InventoryItem
 	add_child(inventory_item_instance)
 
-	(inventory_item_instance).init()
+	inventory_item_instance.init(draggable, amount)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfmguh88h5m7h"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_rj66m"]
+[ext_resource type="Texture2D" uid="uid://drp7cuht4weo4" path="res://LevelObjects/Dynamic/Dominos/Domino.png" id="1_mvoor"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swnwe"]
 size = Vector2(4, 17.5)
@@ -9,9 +9,9 @@ size = Vector2(4, 17.5)
 mass = 0.4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -0.25)
-scale = Vector2(4, 17.5)
-texture = SubResource("CanvasTexture_rj66m")
+position = Vector2(-0.499999, -0.25)
+scale = Vector2(0.78125, 0.546875)
+texture = ExtResource("1_mvoor")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.25)
