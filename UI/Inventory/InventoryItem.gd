@@ -15,6 +15,8 @@ func init(draggable, amount: int):
 func _process(delta):
 	if Input.is_action_just_pressed("click") and can_drag:
 		instantiate_draggable()
+		amount = amount - 1
+		init_amount()
 		can_drag = false
 
 
@@ -42,7 +44,7 @@ func get_texture_of_draggable() -> Texture2D:
 
 func init_amount():
 	if amount <= 0:
-		amount_label.visible = false
+		queue_free()
 		return
 
 	amount_label.text = str(amount)
