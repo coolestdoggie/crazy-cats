@@ -8,6 +8,12 @@
 radius = 20.0998
 
 [node name="InventoryItem" type="TextureRect" node_paths=PackedStringArray("amount_label")]
+anchors_preset = -1
+anchor_right = 0.028
+anchor_bottom = 0.049
+offset_right = 31.744
+offset_bottom = 32.248
+pivot_offset = Vector2(33.025, 30.995)
 texture = ExtResource("1_d8r5h")
 stretch_mode = 5
 script = ExtResource("2_d55xw")
