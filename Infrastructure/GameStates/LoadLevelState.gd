@@ -6,12 +6,12 @@ var level_instance
 var draggable_objects
 
 func enter(_msg := {}) -> void:
-	remove_previous_leve()	
+	remove_previous_level()	
 	load_current_level()
 	state_machine.transition_to("PlanningState")
 
 
-func remove_previous_leve() -> void:
+func remove_previous_level() -> void:
 	if level_instance:
 		level_instance.queue_free()
 

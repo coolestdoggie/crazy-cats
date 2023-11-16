@@ -4,8 +4,9 @@
 [ext_resource type="Script" path="res://UI/Inventory/InventoryUI.gd" id="2_hxcdq"]
 [ext_resource type="PackedScene" uid="uid://dvvhebpv0ovkl" path="res://UI/Inventory/InventoryItem.tscn" id="2_tf6hq"]
 
-[node name="UI" type="CanvasLayer"]
+[node name="UI" type="CanvasLayer" node_paths=PackedStringArray("inventory_ui")]
 script = ExtResource("1_cvy86")
+inventory_ui = NodePath("Control/Inventory")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -57,9 +58,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
 script = ExtResource("2_hxcdq")
-
-[node name="InventoryItem" parent="Control/Inventory" instance=ExtResource("2_tf6hq")]
-layout_mode = 2
+inventory_item_scene = ExtResource("2_tf6hq")
 
 [connection signal="pressed" from="Control/ControlButtons/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Control/ControlButtons/StopButton" to="." method="_on_stop_button_pressed"]

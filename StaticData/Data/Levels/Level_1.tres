@@ -5,4 +5,6 @@
 [resource]
 script = ExtResource("1_udyya")
 level_index = 0
-draggables = {}
+draggables_by_count = {
+"domino": 2
+}
