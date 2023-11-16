@@ -1,6 +1,7 @@
-extends Node
+extends Node2D
 
 var current_level_index := 0
+var current_level_instance
 var all_levels_data : AllLevelsData
 
 func _ready() -> void:

@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfmguh88h5m7h"]
+[gd_scene load_steps=4 format=3 uid="uid://bfmguh88h5m7h"]
 
+[ext_resource type="Script" path="res://LevelObjects/Dynamic/Dominos/Domino.gd" id="1_0o6gg"]
 [ext_resource type="Texture2D" uid="uid://drp7cuht4weo4" path="res://LevelObjects/Dynamic/Dominos/Domino.png" id="1_mvoor"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swnwe"]
@@ -7,6 +8,7 @@ size = Vector2(4, 17.5)
 
 [node name="Domino" type="RigidBody2D"]
 mass = 0.4
+script = ExtResource("1_0o6gg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-0.499999, -0.25)

@@ -2,8 +2,6 @@ extends State
 
 @export var levels: Array[PackedScene]
 
-var level_instance
-var draggable_objects
 
 func enter(_msg := {}) -> void:
 	remove_previous_level()	
@@ -12,10 +10,10 @@ func enter(_msg := {}) -> void:
 
 
 func remove_previous_level() -> void:
-	if level_instance:
-		level_instance.queue_free()
+	if LevelDataService.current_level_instance:
+		LevelDataService.current_level_instance.queue_free()
 
 
 func load_current_level() -> void:
-	level_instance = levels[LevelDataService.current_level_index].instantiate()
-	get_tree().root.get_child(0).add_child(level_instance)
+	LevelDataService.current_level_instance = levels[LevelDataService.current_level_index].instantiate()
+	get_tree().root.get_child(0).add_child(LevelDataService.current_level_instance)
