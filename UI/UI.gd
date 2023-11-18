@@ -23,4 +23,15 @@ func _on_reset_button_pressed():
 
 func _on_game_state_machine_transitioned(state_name:String):
 	if state_name == "PlanningState":
+		enable_inventory()
 		update_ui_inventory()
+	else:
+		disable_inventory()
+
+
+func disable_inventory():
+	inventory_ui.visible = false
+
+
+func enable_inventory():
+	inventory_ui.visible = true
