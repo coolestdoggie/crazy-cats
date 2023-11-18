@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bouomcgdm8t0d"]
 
-[ext_resource type="Texture2D" uid="uid://dth88o2vnnxvw" path="res://Levels/Images/Platform_Blue.png" id="1_17ti2"]
 [ext_resource type="Script" path="res://LevelObjects/LevelObject.gd" id="1_cy7u6"]
+[ext_resource type="Texture2D" uid="uid://dwkmubjk82fbj" path="res://Levels/Images/Platform_Uncolored.png" id="2_ap5x3"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_cyl5u"]
 
@@ -16,7 +16,7 @@ color_overlay = NodePath("Sprite2D/Mask")
 clip_children = 2
 position = Vector2(26, 4)
 scale = Vector2(2.07143, 1)
-texture = ExtResource("1_17ti2")
+texture = ExtResource("2_ap5x3")
 
 [node name="Mask" type="Sprite2D" parent="Sprite2D"]
 visible = false

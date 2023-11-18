@@ -52,7 +52,7 @@ position = Vector2(-72, -34)
 scale = Vector2(1.8, 1)
 
 [node name="Platform9" parent="Environment/Static" instance=ExtResource("1_bxb50")]
-position = Vector2(17, 48)
+position = Vector2(17, 47)
 scale = Vector2(1.08, 1)
 
 [node name="Platform10" parent="Environment/Static" instance=ExtResource("1_bxb50")]
