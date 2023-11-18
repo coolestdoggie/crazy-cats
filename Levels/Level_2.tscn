@@ -13,7 +13,7 @@ offset_left = -487.0
 offset_top = -270.0
 offset_right = 471.0
 offset_bottom = 272.0
-color = Color(1, 0.768627, 1, 1)
+color = Color(0.8, 0.858824, 1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3.525, 3.525)
