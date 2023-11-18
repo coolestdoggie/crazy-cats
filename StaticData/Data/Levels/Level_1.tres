@@ -6,6 +6,5 @@
 script = ExtResource("1_udyya")
 level_index = 0
 draggables_by_count = {
-"ball": 2,
 "domino": 2
 }
