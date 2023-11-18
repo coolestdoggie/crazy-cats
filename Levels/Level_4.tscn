@@ -71,6 +71,10 @@ scale = Vector2(1.08, 1)
 position = Vector2(-41, 84)
 scale = Vector2(1.08, 1)
 
+[node name="Platform14" parent="Environment/Static" instance=ExtResource("1_qapvm")]
+position = Vector2(93, -65)
+scale = Vector2(1.08, 1)
+
 [node name="Finisher" parent="Environment/Static" instance=ExtResource("2_asdrj")]
 position = Vector2(-1, 68)
 
@@ -78,7 +82,7 @@ position = Vector2(-1, 68)
 position = Vector2(-115, -25)
 
 [node name="MilkObstacle" parent="Environment/Dynamic" instance=ExtResource("5_ywerj")]
-position = Vector2(71, 3)
+position = Vector2(189, 3)
 mass = 3.0
 
 [node name="Ball" parent="Environment/Dynamic" instance=ExtResource("4_o746g")]

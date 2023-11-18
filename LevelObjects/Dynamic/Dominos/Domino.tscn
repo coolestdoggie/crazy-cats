@@ -2,5 +2,4 @@
 
 [ext_resource type="PackedScene" uid="uid://bfmguh88h5m7h" path="res://LevelObjects/Dynamic/LevelObject.tscn" id="1_36epv"]
 
-[node name="Domino" node_paths=PackedStringArray("color_overlay") instance=ExtResource("1_36epv")]
-color_overlay = NodePath("Sprite2D/Mask")
+[node name="Domino" instance=ExtResource("1_36epv")]

@@ -9,7 +9,7 @@ bounce = 0.8
 [sub_resource type="CircleShape2D" id="CircleShape2D_bkio0"]
 radius = 9.00347
 
-[node name="Ball2" instance=ExtResource("1_jwu4p")]
+[node name="Ball" groups=["ball"] instance=ExtResource("1_jwu4p")]
 physics_material_override = SubResource("PhysicsMaterial_eqmyu")
 
 [node name="Sprite2D" parent="." index="0"]
