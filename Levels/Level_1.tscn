@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bspelakc6vbau"]
+[gd_scene load_steps=8 format=3 uid="uid://bspelakc6vbau"]
 
 [ext_resource type="PackedScene" uid="uid://h7ki5opejbw4" path="res://Cats/Finisher/Finisher.tscn" id="2_n7g8j"]
+[ext_resource type="PackedScene" uid="uid://puuhi10yh0sb" path="res://Cats/Introvert/BoxWithIntrovert.tscn" id="3_xahm4"]
 [ext_resource type="PackedScene" uid="uid://vaxblbt1cguo" path="res://LevelObjects/Static/Platform/Platform.tscn" id="3_xhgb3"]
 [ext_resource type="PackedScene" uid="uid://den11gq2yc51f" path="res://LevelObjects/Dynamic/Balls/Ball.tscn" id="4_34tnt"]
 [ext_resource type="PackedScene" uid="uid://ddbex485bhdmx" path="res://LevelObjects/Dynamic/Food/Apple.tscn" id="5_sssms"]
@@ -10,9 +11,9 @@
 [node name="Level_1" type="Node2D"]
 
 [node name="Background" type="ColorRect" parent="."]
-offset_left = -475.0
+offset_left = -487.0
 offset_top = -270.0
-offset_right = 483.0
+offset_right = 471.0
 offset_bottom = 272.0
 color = Color(1, 0.768627, 1, 1)
 
@@ -46,6 +47,9 @@ scale = Vector2(0.425, 1)
 
 [node name="Finisher" parent="Environment/Static" instance=ExtResource("2_n7g8j")]
 position = Vector2(91, 21)
+
+[node name="BoxWithIntrovert" parent="Environment/Static" instance=ExtResource("3_xahm4")]
+position = Vector2(23, -58)
 
 [node name="Pusher" parent="Environment/Static" instance=ExtResource("7_mq222")]
 position = Vector2(-112, -31)

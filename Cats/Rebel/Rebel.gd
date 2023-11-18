@@ -24,8 +24,7 @@ func push_raycasted_body():
 	if !rigid_body:
 		return
 
-	var angle = rotation
-	rigid_body.apply_impulse(Vector2(cos(angle), sin(angle)) * impulse_force)
+	rigid_body.apply_impulse(Vector2(80, -impulse_force), Vector2(5, -20))
 
 	current_cooldown = cooldown_between_pushes
 	

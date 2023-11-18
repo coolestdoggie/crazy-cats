@@ -1,75 +1,73 @@
-[gd_scene load_steps=22 format=3 uid="uid://ccv82pnguqfcl"]
+[gd_scene load_steps=21 format=3 uid="uid://ckutn3iptp7ke"]
 
-[ext_resource type="Script" path="res://Cats/Rebel/Rebel.gd" id="1_of43t"]
-[ext_resource type="Texture2D" uid="uid://b211705w1bqnd" path="res://Cats/Images/kitty.png" id="2_5fsgv"]
+[ext_resource type="Texture2D" uid="uid://b211705w1bqnd" path="res://Cats/Images/kitty.png" id="2_fq5wp"]
+[ext_resource type="Script" path="res://Cats/Introvert/Introvert.gd" id="2_otrqy"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r5xlv"]
-bounce = 0.4
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_1uj66"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ieda8"]
+size = Vector2(20, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c8yox"]
-atlas = ExtResource("2_5fsgv")
+atlas = ExtResource("2_fq5wp")
 region = Rect2(0, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_12l5t"]
-atlas = ExtResource("2_5fsgv")
+atlas = ExtResource("2_fq5wp")
 region = Rect2(32, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rpw5x"]
-atlas = ExtResource("2_5fsgv")
+atlas = ExtResource("2_fq5wp")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_so4gx"]
-atlas = ExtResource("2_5fsgv")
+atlas = ExtResource("2_fq5wp")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ufj1n"]
-atlas = ExtResource("2_5fsgv")
+atlas = ExtResource("2_fq5wp")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cn3uf"]
-atlas = ExtResource("2_5fsgv")
+atlas = ExtResource("2_fq5wp")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pdlqp"]
-atlas = ExtResource("2_5fsgv")
+atlas = ExtResource("2_fq5wp")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_463r4"]
-atlas = ExtResource("2_5fsgv")
+atlas = ExtResource("2_fq5wp")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mpisq"]
-atlas = ExtResource("2_5fsgv")
+atlas = ExtResource("2_fq5wp")
 region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jgw4w"]
-atlas = ExtResource("2_5fsgv")
+atlas = ExtResource("2_fq5wp")
 region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_76b4q"]
-atlas = ExtResource("2_5fsgv")
+atlas = ExtResource("2_fq5wp")
 region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p54vl"]
-atlas = ExtResource("2_5fsgv")
+atlas = ExtResource("2_fq5wp")
 region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w5q0y"]
-atlas = ExtResource("2_5fsgv")
+atlas = ExtResource("2_fq5wp")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ybbx0"]
-atlas = ExtResource("2_5fsgv")
+atlas = ExtResource("2_fq5wp")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ybdtb"]
-atlas = ExtResource("2_5fsgv")
+atlas = ExtResource("2_fq5wp")
 region = Rect2(64, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7txat"]
-atlas = ExtResource("2_5fsgv")
+atlas = ExtResource("2_fq5wp")
 region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4gcbd"]
@@ -143,21 +141,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Rebel" type="RigidBody2D"]
-physics_material_override = SubResource("PhysicsMaterial_r5xlv")
-lock_rotation = true
-script = ExtResource("1_of43t")
+[node name="Introvert" type="RigidBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6.165)
-shape = SubResource("CircleShape2D_1uj66")
+[node name="Cat" type="StaticBody2D" parent="."]
+script = ExtResource("2_otrqy")
+move_range = 10.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cat"]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_ieda8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cat"]
 sprite_frames = SubResource("SpriteFrames_4gcbd")
 animation = &"fall_down_right"
 autoplay = "fall_down_right"
 frame_progress = 0.911319
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(11, 7)
-target_position = Vector2(16, 0)
