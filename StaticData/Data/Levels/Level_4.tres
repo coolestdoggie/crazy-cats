@@ -6,7 +6,5 @@
 script = ExtResource("1_tkljv")
 level_index = 0
 draggables_by_count = {
-"d_platform": 1,
-"eater": 1,
-"pusher": 1
+"eater": 1
 }
