@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DraggableObjectsData" load_steps=7 format=3 uid="uid://bece7jvpki8lk"]
+[gd_resource type="Resource" script_class="DraggableObjectsData" load_steps=8 format=3 uid="uid://bece7jvpki8lk"]
 
 [ext_resource type="Script" path="res://StaticData/Scripts/DraggableObjectsData.gd" id="1_f3oli"]
 [ext_resource type="PackedScene" uid="uid://cpavkypjxix3e" path="res://LevelObjects/Dynamic/Balls/Ball.tscn" id="1_uchph"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c02hoc5wj15nx" path="res://Cats/Pusher/Pusher.tscn" id="3_4as2e"]
 [ext_resource type="PackedScene" uid="uid://bouomcgdm8t0d" path="res://LevelObjects/Dynamic/DynamicPlatform.tscn" id="4_5f37p"]
 [ext_resource type="PackedScene" uid="uid://dustb7dodr8sd" path="res://Cats/Eater/Eater.tscn" id="5_pli51"]
+[ext_resource type="PackedScene" uid="uid://puuhi10yh0sb" path="res://Cats/Introvert/BoxWithIntrovert.tscn" id="6_lgpry"]
 
 [resource]
 script = ExtResource("1_f3oli")
@@ -14,5 +15,6 @@ objects = {
 "d_platform": ExtResource("4_5f37p"),
 "domino": ExtResource("2_3c6tn"),
 "eater": ExtResource("5_pli51"),
+"introvert": ExtResource("6_lgpry"),
 "pusher": ExtResource("3_4as2e")
 }
