@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://coq0antopmub0"]
+
+[ext_resource type="Script" path="res://StaticData/Scripts/LevelStaticData.gd" id="1_tkljv"]
+
+[resource]
+script = ExtResource("1_tkljv")
+level_index = 0
+draggables_by_count = {
+"d_platform": 1,
+"pusher": 1
+}
