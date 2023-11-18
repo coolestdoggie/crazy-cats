@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://den11gq2yc51f"]
+[gd_scene load_steps=5 format=3 uid="uid://den11gq2yc51f"]
 
+[ext_resource type="Script" path="res://LevelObjects/Dynamic/Balls/Ball.gd" id="1_5tp8w"]
 [ext_resource type="Texture2D" uid="uid://buuu5itidvp33" path="res://LevelObjects/Dynamic/Balls/Images/basketball.png" id="1_e4dx7"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lrwgh"]
+bounce = 0.8
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xkh0n"]
 radius = 6.08276
 
 [node name="Ball" type="RigidBody2D"]
 mass = 0.4
+physics_material_override = SubResource("PhysicsMaterial_lrwgh")
+script = ExtResource("1_5tp8w")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.2)

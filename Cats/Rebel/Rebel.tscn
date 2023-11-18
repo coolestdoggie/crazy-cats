@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://ccv82pnguqfcl"]
 
-[ext_resource type="Script" path="res://Cats/Rebel/Rebel.gd" id="1_of43t"]
+[ext_resource type="Script" path="res://Cats/Rebel/Rebel.gd" id="1_qu7rb"]
 [ext_resource type="Texture2D" uid="uid://b211705w1bqnd" path="res://Cats/Images/kitty.png" id="2_5fsgv"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r5xlv"]
@@ -146,7 +146,11 @@ animations = [{
 [node name="Rebel" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_r5xlv")
 lock_rotation = true
+<<<<<<< HEAD
 script = ExtResource("1_of43t")
+=======
+script = ExtResource("1_qu7rb")
+>>>>>>> aaaaaef54789e6e85ea2c0437fedc78e86996556
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6.165)
