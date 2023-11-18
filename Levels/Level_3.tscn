@@ -28,7 +28,7 @@ position = Vector2(-128, -63)
 scale = Vector2(0.81, 1)
 
 [node name="Platform5" parent="Environment/Static" instance=ExtResource("1_bxb50")]
-position = Vector2(36, -34)
+position = Vector2(36, -33)
 rotation = 0.509636
 scale = Vector2(0.5, 1)
 
