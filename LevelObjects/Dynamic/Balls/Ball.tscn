@@ -9,9 +9,8 @@ bounce = 0.8
 [sub_resource type="CircleShape2D" id="CircleShape2D_bkio0"]
 radius = 9.00347
 
-[node name="Ball2" node_paths=PackedStringArray("color_overlay") instance=ExtResource("1_jwu4p")]
+[node name="Ball2" instance=ExtResource("1_jwu4p")]
 physics_material_override = SubResource("PhysicsMaterial_eqmyu")
-color_overlay = NodePath("Sprite2D/Mask")
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(0, 0)

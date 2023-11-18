@@ -10,6 +10,8 @@ size = Vector2(4, 17.5)
 
 [node name="LevelObject" type="RigidBody2D" node_paths=PackedStringArray("color_overlay")]
 mass = 0.4
+max_contacts_reported = 3
+contact_monitor = true
 script = ExtResource("1_yxy35")
 color_overlay = NodePath("Sprite2D/Mask")
 

@@ -12,6 +12,7 @@ var is_dragging : bool :
 
 var have_drag_ability : bool
 var is_in_collider_bounds : bool
+var is_colliding_with_obstacle_while_drag : bool
 
 func _ready():
 	mouse_entered.connect(_on_mouse_entered)
@@ -20,9 +21,12 @@ func _ready():
 
 func on_is_dragging_set(dragging: bool):
 	if dragging:
-		color_overlay.visible = true
-		color_overlay.modulate = Color.GREEN
+		if is_colliding_with_obstacle_while_drag:
+			color_overlay.modulate = Color.RED
+		else:
+			color_overlay.modulate = Color.GREEN
 		color_overlay.modulate.a = 0.3
+		color_overlay.visible = true
 	else:
 		color_overlay.visible = false
 
