@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://puuhi10yh0sb"]
+[gd_scene load_steps=7 format=3 uid="uid://puuhi10yh0sb"]
 
 [ext_resource type="Script" path="res://LevelObjects/LevelObject.gd" id="1_o28dk"]
 [ext_resource type="PackedScene" uid="uid://cc8o5gttf7vtx" path="res://Cats/Introvert/Box.tscn" id="1_r04in"]
@@ -8,6 +8,8 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nq8ry"]
 size = Vector2(28, 20)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_auxdc"]
 
 [node name="BoxWithIntrovert" type="RigidBody2D" node_paths=PackedStringArray("color_overlay")]
 collision_layer = 2147483648
@@ -34,5 +36,11 @@ texture = SubResource("CanvasTexture_g8b3g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_nq8ry")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(7.15256e-07, 4.76837e-07)
+scale = Vector2(28, 20)
+texture = SubResource("CanvasTexture_auxdc")
 
 [editable path="Box/Introvert"]

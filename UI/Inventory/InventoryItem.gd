@@ -47,6 +47,7 @@ func get_texture_of_draggable() -> Texture2D:
 			var new_texture = texture.duplicate()
 			instance.queue_free()
 			return new_texture
+			
 	return null
 
 
