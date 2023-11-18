@@ -38,7 +38,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_yoir7")
 }],
 "loop": true,
-"name": &"eater_walk",
+"name": &"idle_right",
 "speed": 5.0
 }]
 
@@ -59,7 +59,7 @@ shape = SubResource("RectangleShape2D_nd3lc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 clip_children = 2
 sprite_frames = SubResource("SpriteFrames_alavt")
-animation = &"eater_walk"
+animation = &"idle_right"
 
 [node name="Mask" type="Sprite2D" parent="AnimatedSprite2D"]
 visible = false
