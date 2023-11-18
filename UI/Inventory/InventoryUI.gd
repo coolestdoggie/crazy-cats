@@ -1,4 +1,4 @@
-class_name InventoryUI extends HBoxContainer
+class_name InventoryUI extends VBoxContainer
 
 @export var inventory_item_scene : PackedScene
 
