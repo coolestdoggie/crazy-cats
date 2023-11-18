@@ -15,6 +15,7 @@ offset_right = -0.512001
 offset_bottom = -0.152008
 pivot_offset = Vector2(33.025, 30.995)
 texture = ExtResource("1_5veqp")
+expand_mode = 2
 stretch_mode = 5
 script = ExtResource("2_d55xw")
 amount_label = NodePath("Label")
