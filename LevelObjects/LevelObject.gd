@@ -31,7 +31,6 @@ func on_is_dragging_set(dragging: bool):
 		color_overlay.visible = false
 
 func _on_mouse_entered():
-	print("fdfdfd")
 	is_in_collider_bounds = true
 
 

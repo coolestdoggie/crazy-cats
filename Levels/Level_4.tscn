@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnjgvutscbje8"]
+[gd_scene load_steps=7 format=3 uid="uid://dnjgvutscbje8"]
 
 [ext_resource type="PackedScene" uid="uid://vaxblbt1cguo" path="res://LevelObjects/Static/Platform/Platform.tscn" id="1_qapvm"]
 [ext_resource type="PackedScene" uid="uid://h7ki5opejbw4" path="res://Cats/Finisher/Finisher.tscn" id="2_asdrj"]
 [ext_resource type="PackedScene" uid="uid://cpavkypjxix3e" path="res://LevelObjects/Dynamic/Balls/Ball.tscn" id="4_o746g"]
 [ext_resource type="PackedScene" uid="uid://ddbex485bhdmx" path="res://LevelObjects/Dynamic/Food/Apple.tscn" id="5_fmsmo"]
 [ext_resource type="PackedScene" uid="uid://b0m3f57o48xy4" path="res://LevelObjects/Dynamic/FoodObstacles/MilkObstacle.tscn" id="5_ywerj"]
+[ext_resource type="PackedScene" uid="uid://cc8o5gttf7vtx" path="res://Cats/Introvert/Box.tscn" id="6_b05c0"]
 
 [node name="Level_4" type="Node2D"]
 
@@ -90,3 +91,6 @@ position = Vector2(-18, -55)
 
 [node name="Apple" parent="Environment/Dynamic" instance=ExtResource("5_fmsmo")]
 position = Vector2(48, 77)
+
+[node name="Box" parent="." instance=ExtResource("6_b05c0")]
+position = Vector2(128, -75)
