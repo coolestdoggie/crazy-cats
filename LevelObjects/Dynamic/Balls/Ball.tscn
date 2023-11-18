@@ -1,22 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://den11gq2yc51f"]
+[gd_scene load_steps=5 format=3 uid="uid://cpavkypjxix3e"]
 
-[ext_resource type="Script" path="res://LevelObjects/Dynamic/Balls/Ball.gd" id="1_5tp8w"]
-[ext_resource type="Texture2D" uid="uid://buuu5itidvp33" path="res://LevelObjects/Dynamic/Balls/Images/basketball.png" id="1_e4dx7"]
+[ext_resource type="PackedScene" uid="uid://bfmguh88h5m7h" path="res://LevelObjects/Dynamic/LevelObject.tscn" id="1_jwu4p"]
+[ext_resource type="Texture2D" uid="uid://buuu5itidvp33" path="res://LevelObjects/Dynamic/Balls/Images/basketball.png" id="2_gr35k"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lrwgh"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_eqmyu"]
 bounce = 0.8
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xkh0n"]
-radius = 6.08276
+[sub_resource type="CircleShape2D" id="CircleShape2D_bkio0"]
+radius = 9.00347
 
-[node name="Ball" type="RigidBody2D"]
-mass = 0.4
-physics_material_override = SubResource("PhysicsMaterial_lrwgh")
-script = ExtResource("1_5tp8w")
+[node name="Ball2" node_paths=PackedStringArray("color_overlay") instance=ExtResource("1_jwu4p")]
+physics_material_override = SubResource("PhysicsMaterial_eqmyu")
+color_overlay = NodePath("Sprite2D/Mask")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_e4dx7")
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, 0)
+scale = Vector2(0.287, 0.292)
+texture = ExtResource("2_gr35k")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_xkh0n")
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_bkio0")

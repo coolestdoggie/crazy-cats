@@ -1,20 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bfmguh88h5m7h"]
+[gd_scene load_steps=2 format=3 uid="uid://cqsyxyln7cw60"]
 
-[ext_resource type="Script" path="res://LevelObjects/Dynamic/Dominos/Domino.gd" id="1_0o6gg"]
-[ext_resource type="Texture2D" uid="uid://drp7cuht4weo4" path="res://LevelObjects/Dynamic/Dominos/Domino.png" id="1_mvoor"]
+[ext_resource type="PackedScene" uid="uid://bfmguh88h5m7h" path="res://LevelObjects/Dynamic/LevelObject.tscn" id="1_36epv"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_swnwe"]
-size = Vector2(4, 17.5)
-
-[node name="Domino" type="RigidBody2D"]
-mass = 0.4
-script = ExtResource("1_0o6gg")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-0.499999, -0.25)
-scale = Vector2(0.78125, 0.546875)
-texture = ExtResource("1_mvoor")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.25)
-shape = SubResource("RectangleShape2D_swnwe")
+[node name="Domino" node_paths=PackedStringArray("color_overlay") instance=ExtResource("1_36epv")]
+color_overlay = NodePath("Sprite2D/Mask")

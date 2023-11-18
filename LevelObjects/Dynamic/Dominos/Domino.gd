@@ -1,2 +1,2 @@
-extends LevelObject
+class_name Domino extends LevelObject
 

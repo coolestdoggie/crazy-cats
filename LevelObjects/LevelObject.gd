@@ -1,5 +1,8 @@
 class_name LevelObject extends RigidBody2D
 
+@export var color_overlay : Sprite2D
+
+
 var is_dragging : bool :
 	set(value):
 		on_is_dragging_set(value)
@@ -16,11 +19,12 @@ func _ready():
 
 
 func on_is_dragging_set(dragging: bool):
-	pass
 	if dragging:
-		scale = Vector2(1.1, 1.1)
+		color_overlay.visible = true
+		color_overlay.modulate = Color.GREEN
+		color_overlay.modulate.a = 0.3
 	else:
-		scale = Vector2.ONE
+		color_overlay.visible = false
 
 func _on_mouse_entered():
 	is_in_collider_bounds = true
