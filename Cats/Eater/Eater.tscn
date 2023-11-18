@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dustb7dodr8sd"]
+[gd_scene load_steps=11 format=3 uid="uid://dustb7dodr8sd"]
 
 [ext_resource type="Texture2D" uid="uid://b211705w1bqnd" path="res://Cats/Images/kitty.png" id="1_7wyja"]
+[ext_resource type="Script" path="res://Cats/Eater/Eater.gd" id="1_lw0ix"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nd3lc"]
-size = Vector2(20, 17)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rjtbk"]
+height = 20.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wbtij"]
 atlas = ExtResource("1_7wyja")
@@ -37,16 +38,41 @@ animations = [{
 "texture": SubResource("AtlasTexture_yoir7")
 }],
 "loop": true,
-"name": &"eater_walk",
+"name": &"idle_right",
 "speed": 5.0
 }]
 
-[node name="Eater" type="RigidBody2D"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_lye7h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nrte6"]
+size = Vector2(56.5, 25)
+
+[node name="Eater" type="RigidBody2D" node_paths=PackedStringArray("collision_shape", "color_overlay")]
+max_contacts_reported = 3
+contact_monitor = true
+script = ExtResource("1_lw0ix")
+collision_shape = NodePath("CollisionShape2D")
+color_overlay = NodePath("AnimatedSprite2D/Mask")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6.5)
-shape = SubResource("RectangleShape2D_nd3lc")
+position = Vector2(0, 5)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_rjtbk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+clip_children = 2
 sprite_frames = SubResource("SpriteFrames_alavt")
-animation = &"eater_walk"
+animation = &"idle_right"
+
+[node name="Mask" type="Sprite2D" parent="AnimatedSprite2D"]
+visible = false
+scale = Vector2(76, 53)
+texture = SubResource("CanvasTexture_lye7h")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="EatArea" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_nrte6")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_eat_area_body_entered"]

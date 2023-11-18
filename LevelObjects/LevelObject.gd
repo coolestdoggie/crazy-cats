@@ -32,12 +32,10 @@ func on_is_dragging_set(dragging: bool):
 
 func _on_mouse_entered():
 	is_in_collider_bounds = true
-	print(is_in_collider_bounds)
 
 
 func _on_mouse_exited():
 	is_in_collider_bounds = false
-	print(is_in_collider_bounds)
 
 
 func _process(delta):

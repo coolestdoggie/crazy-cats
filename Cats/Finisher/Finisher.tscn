@@ -147,7 +147,7 @@ animations = [{
 
 [node name="Finisher" type="RigidBody2D" node_paths=PackedStringArray("bulb_popup", "text_popup")]
 physics_material_override = SubResource("PhysicsMaterial_r5xlv")
-max_contacts_reported = 1
+max_contacts_reported = 3
 contact_monitor = true
 lock_rotation = true
 script = ExtResource("1_grg67")

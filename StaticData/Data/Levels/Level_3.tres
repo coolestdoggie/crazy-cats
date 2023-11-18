@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://c5hipde2woyqh"]
+
+[ext_resource type="Script" path="res://StaticData/Scripts/LevelStaticData.gd" id="1_psc2a"]
+
+[resource]
+script = ExtResource("1_psc2a")
+level_index = 0
+draggables_by_count = {
+"d_platform": 1,
+"pusher": 1
+}

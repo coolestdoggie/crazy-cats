@@ -41,6 +41,12 @@ func get_texture_of_draggable() -> Texture2D:
 			var new_texture = texture.duplicate()
 			instance.queue_free()
 			return new_texture
+		if child is AnimatedSprite2D:
+			var animated_sprite = child as AnimatedSprite2D
+			var texture = animated_sprite.sprite_frames.get_frame_texture(animated_sprite.sprite_frames.get_animation_names()[0], 0)
+			var new_texture = texture.duplicate()
+			instance.queue_free()
+			return new_texture
 	return null
 
 

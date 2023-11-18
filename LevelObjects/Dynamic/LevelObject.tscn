@@ -6,6 +6,7 @@
 [sub_resource type="CanvasTexture" id="CanvasTexture_mui6i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swnwe"]
+resource_local_to_scene = true
 size = Vector2(4, 17.5)
 
 [node name="LevelObject" type="RigidBody2D" node_paths=PackedStringArray("color_overlay")]

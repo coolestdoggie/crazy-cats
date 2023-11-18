@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://dvvhebpv0ovkl"]
 
-[ext_resource type="Texture2D" uid="uid://drp7cuht4weo4" path="res://LevelObjects/Dynamic/Dominos/Domino.png" id="1_5veqp"]
+[ext_resource type="Texture2D" uid="uid://buuu5itidvp33" path="res://LevelObjects/Dynamic/Balls/Images/basketball.png" id="1_fhgws"]
 [ext_resource type="FontFile" uid="uid://dnfsjtbtfmit1" path="res://UI/Fonts/MonsterFriendFore.otf" id="2_2lt2s"]
 [ext_resource type="Script" path="res://UI/Inventory/InventoryItem.gd" id="2_d55xw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ahb06"]
-radius = 20.0998
+radius = 33.0606
 
 [node name="InventoryItem" type="TextureRect" node_paths=PackedStringArray("amount_label")]
 anchors_preset = -1
@@ -14,7 +14,8 @@ anchor_bottom = 0.099
 offset_right = -0.512001
 offset_bottom = -0.152008
 pivot_offset = Vector2(33.025, 30.995)
-texture = ExtResource("1_5veqp")
+texture = ExtResource("1_fhgws")
+expand_mode = 4
 stretch_mode = 5
 script = ExtResource("2_d55xw")
 amount_label = NodePath("Label")

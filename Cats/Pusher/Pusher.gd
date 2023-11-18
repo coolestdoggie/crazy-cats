@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends LevelObject
 
 @export var raycast: RayCast2D
 @export var cooldown_between_pushes: float
@@ -13,6 +13,8 @@ func start_acting():
 
 
 func _process(delta):
+	super._process(delta)
+
 	if !started_acting:
 		return
 	current_cooldown = current_cooldown - delta

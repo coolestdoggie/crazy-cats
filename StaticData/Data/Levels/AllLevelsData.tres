@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="AllLevelsData" load_steps=3 format=3 uid="uid://bxtbkh70vvwp0"]
+[gd_resource type="Resource" script_class="AllLevelsData" load_steps=6 format=3 uid="uid://bxtbkh70vvwp0"]
 
 [ext_resource type="Resource" uid="uid://qn8u7wb78lwo" path="res://StaticData/Data/Levels/Level_1.tres" id="1_5s2bu"]
 [ext_resource type="Script" path="res://StaticData/Scripts/AllLevelsData.gd" id="1_ae0x6"]
+[ext_resource type="Resource" uid="uid://c3lr1mmlgqwrg" path="res://StaticData/Data/Levels/Level_2.tres" id="2_mjmp1"]
+[ext_resource type="Resource" uid="uid://c5hipde2woyqh" path="res://StaticData/Data/Levels/Level_3.tres" id="3_q5iox"]
+[ext_resource type="Resource" uid="uid://coq0antopmub0" path="res://StaticData/Data/Levels/Level_4.tres" id="4_n0h05"]
 
 [resource]
 script = ExtResource("1_ae0x6")
-levels_data = Array[Resource("res://StaticData/Scripts/LevelStaticData.gd")]([ExtResource("1_5s2bu")])
+levels_data = Array[Resource("res://StaticData/Scripts/LevelStaticData.gd")]([ExtResource("1_5s2bu"), ExtResource("2_mjmp1"), ExtResource("3_q5iox"), ExtResource("4_n0h05")])

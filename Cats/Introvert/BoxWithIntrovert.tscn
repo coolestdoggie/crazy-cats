@@ -1,11 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://puuhi10yh0sb"]
+[gd_scene load_steps=6 format=3 uid="uid://puuhi10yh0sb"]
 
+[ext_resource type="Script" path="res://LevelObjects/LevelObject.gd" id="1_o28dk"]
 [ext_resource type="PackedScene" uid="uid://cc8o5gttf7vtx" path="res://Cats/Introvert/Box.tscn" id="1_r04in"]
 [ext_resource type="PackedScene" uid="uid://ckutn3iptp7ke" path="res://Cats/Introvert/Introvert.tscn" id="2_pak3h"]
 
-[node name="BoxWithIntrovert" type="Node2D"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_g8b3g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nq8ry"]
+size = Vector2(28, 20)
+
+[node name="BoxWithIntrovert" type="RigidBody2D" node_paths=PackedStringArray("color_overlay")]
+collision_layer = 2147483648
+collision_mask = 0
+max_contacts_reported = 3
+contact_monitor = true
+can_sleep = false
+script = ExtResource("1_o28dk")
+color_overlay = NodePath("Box/Introvert/AnimatedSprite2D/Mask")
 
 [node name="Box" parent="." instance=ExtResource("1_r04in")]
 
 [node name="Introvert" parent="Box" instance=ExtResource("2_pak3h")]
 position = Vector2(0, -8)
+
+[node name="AnimatedSprite2D" parent="Box/Introvert" index="1"]
+clip_children = 2
+
+[node name="Mask" type="Sprite2D" parent="Box/Introvert/AnimatedSprite2D" index="0"]
+visible = false
+position = Vector2(1.3113e-06, 7)
+scale = Vector2(52, 34)
+texture = SubResource("CanvasTexture_g8b3g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nq8ry")
+
+[editable path="Box/Introvert"]

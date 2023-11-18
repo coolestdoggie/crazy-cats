@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0m3f57o48xy4"]
+
+[ext_resource type="PackedScene" uid="uid://bfmguh88h5m7h" path="res://LevelObjects/Dynamic/LevelObject.tscn" id="1_2bo4y"]
+[ext_resource type="Texture2D" uid="uid://uan1614yaaoa" path="res://LevelObjects/Static/FoodObstacles/Images/Milk.png" id="2_v22uw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2tb16"]
+resource_local_to_scene = true
+size = Vector2(14, 17.5)
+
+[node name="MilkObstacle" groups=["food"] instance=ExtResource("1_2bo4y")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, 0)
+scale = Vector2(0.53125, 0.546875)
+texture = ExtResource("2_v22uw")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0.25)
+shape = SubResource("RectangleShape2D_2tb16")

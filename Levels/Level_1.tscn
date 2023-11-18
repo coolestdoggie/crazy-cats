@@ -63,7 +63,7 @@ position = Vector2(183, 35)
 position = Vector2(103, 33)
 
 [node name="Domino2" parent="Environment/Dynamic" instance=ExtResource("7_bqddp")]
-position = Vector2(115, 33)
+position = Vector2(129, 33)
 
 [node name="Domino5" parent="Environment/Dynamic" instance=ExtResource("7_bqddp")]
 position = Vector2(158, 33)
