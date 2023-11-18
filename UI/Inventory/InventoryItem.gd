@@ -22,7 +22,9 @@ func _process(delta):
 
 func instantiate_draggable():
 	var instance = draggable.instantiate()
+	instance.have_drag_ability = true
 	instance.is_dragging = true
+	instance.input_pickable = true
 	LevelDataService.current_level_instance.add_child(instance)
 
 		
