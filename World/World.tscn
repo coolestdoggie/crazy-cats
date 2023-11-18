@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://c42fqx8kandh8"]
+[gd_scene load_steps=9 format=3 uid="uid://c42fqx8kandh8"]
 
 [ext_resource type="Script" path="res://Infrastructure/StateMachine.gd" id="1_5lvt3"]
 [ext_resource type="Script" path="res://Infrastructure/GameStates/PlanningState.gd" id="2_82783"]
 [ext_resource type="Script" path="res://Infrastructure/GameStates/LoadLevelState.gd" id="2_md78k"]
 [ext_resource type="Script" path="res://Infrastructure/GameStates/PlayState.gd" id="3_xojuj"]
+[ext_resource type="PackedScene" uid="uid://d3g8vqp4svx13" path="res://Levels/Level_2.tscn" id="4_pu0km"]
 [ext_resource type="PackedScene" uid="uid://bspelakc6vbau" path="res://Levels/Level_1.tscn" id="5_m6ykv"]
+[ext_resource type="Script" path="res://Infrastructure/GameStates/FinishState.gd" id="7_ooest"]
 [ext_resource type="PackedScene" uid="uid://cotmb588ghw1a" path="res://UI/UI.tscn" id="8_bqpel"]
 
 [node name="World" type="Node2D"]
@@ -15,7 +17,7 @@ initial_state = NodePath("LoadLevelState")
 
 [node name="LoadLevelState" type="Node2D" parent="GameStateMachine"]
 script = ExtResource("2_md78k")
-levels = Array[PackedScene]([ExtResource("5_m6ykv")])
+levels = Array[PackedScene]([ExtResource("5_m6ykv"), ExtResource("4_pu0km")])
 
 [node name="PlanningState" type="Node2D" parent="GameStateMachine"]
 script = ExtResource("2_82783")
@@ -23,9 +25,12 @@ script = ExtResource("2_82783")
 [node name="PlayState" type="Node2D" parent="GameStateMachine"]
 script = ExtResource("3_xojuj")
 
+[node name="FinishState" type="Node2D" parent="GameStateMachine"]
+script = ExtResource("7_ooest")
+
 [node name="UI" parent="." instance=ExtResource("8_bqpel")]
 
 [connection signal="transitioned" from="GameStateMachine" to="UI" method="_on_game_state_machine_transitioned"]
+[connection signal="next_level_pressed" from="UI" to="GameStateMachine" method="_on_ui_next_level_pressed"]
 [connection signal="play_button_pressed" from="UI" to="GameStateMachine" method="_on_ui_play_button_pressed"]
 [connection signal="reset_button_pressed" from="UI" to="GameStateMachine" method="_on_ui_reset_button_pressed"]
-[connection signal="stop_button_pressed" from="UI" to="GameStateMachine" method="_on_ui_stop_button_pressed"]

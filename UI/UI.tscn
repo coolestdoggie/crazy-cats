@@ -1,14 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://cotmb588ghw1a"]
+[gd_scene load_steps=6 format=3 uid="uid://cotmb588ghw1a"]
 
 [ext_resource type="Script" path="res://UI/UI.gd" id="1_cvy86"]
 [ext_resource type="Script" path="res://UI/Inventory/InventoryUI.gd" id="2_hxcdq"]
 [ext_resource type="PackedScene" uid="uid://dvvhebpv0ovkl" path="res://UI/Inventory/InventoryItem.tscn" id="2_tf6hq"]
+[ext_resource type="Script" path="res://UI/EndLevelUI.gd" id="4_0l7tw"]
+[ext_resource type="FontFile" uid="uid://gmqg36fdkgp2" path="res://UI/Fonts/bit_outline.ttf" id="4_cxa1n"]
 
-[node name="UI" type="CanvasLayer" node_paths=PackedStringArray("inventory_ui")]
+[node name="UI" type="CanvasLayer" node_paths=PackedStringArray("inventory_ui", "in_game_ui", "end_level_ui")]
 script = ExtResource("1_cvy86")
-inventory_ui = NodePath("Control/Inventory")
+inventory_ui = NodePath("InGameUI/Inventory")
+in_game_ui = NodePath("InGameUI")
+end_level_ui = NodePath("EndLevelUI")
 
-[node name="Control" type="Control" parent="."]
+[node name="InGameUI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,7 +20,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ControlButtons" type="HBoxContainer" parent="Control"]
+[node name="ControlButtons" type="HBoxContainer" parent="InGameUI"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -29,19 +33,15 @@ grow_horizontal = 2
 size_flags_vertical = 0
 alignment = 1
 
-[node name="PlayButton" type="Button" parent="Control/ControlButtons"]
+[node name="PlayButton" type="Button" parent="InGameUI/ControlButtons"]
 layout_mode = 2
 text = "Play"
 
-[node name="StopButton" type="Button" parent="Control/ControlButtons"]
-layout_mode = 2
-text = "Stop"
-
-[node name="ResetButton" type="Button" parent="Control/ControlButtons"]
+[node name="ResetButton" type="Button" parent="InGameUI/ControlButtons"]
 layout_mode = 2
 text = "Reset"
 
-[node name="Inventory" type="HBoxContainer" parent="Control"]
+[node name="Inventory" type="HBoxContainer" parent="InGameUI"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -60,6 +60,50 @@ alignment = 1
 script = ExtResource("2_hxcdq")
 inventory_item_scene = ExtResource("2_tf6hq")
 
-[connection signal="pressed" from="Control/ControlButtons/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Control/ControlButtons/StopButton" to="." method="_on_stop_button_pressed"]
-[connection signal="pressed" from="Control/ControlButtons/ResetButton" to="." method="_on_reset_button_pressed"]
+[node name="EndLevelUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_0l7tw")
+
+[node name="CongratulationsLabel" type="Label" parent="EndLevelUI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -212.0
+offset_top = 125.0
+offset_right = 212.0
+offset_bottom = 148.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_cxa1n")
+theme_override_font_sizes/font_size = 46
+text = "Congratulations!
+Experiment completed!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EndLevelUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -341.0
+offset_right = 45.0
+offset_bottom = -301.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="NextLevelButton" type="Button" parent="EndLevelUI/VBoxContainer"]
+layout_mode = 2
+text = "Next Level"
+
+[connection signal="pressed" from="InGameUI/ControlButtons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="InGameUI/ControlButtons/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="EndLevelUI/VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
