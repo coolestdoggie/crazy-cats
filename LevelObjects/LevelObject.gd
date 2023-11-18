@@ -1,6 +1,12 @@
 class_name LevelObject extends RigidBody2D
 
-var is_dragging
+var is_dragging : bool :
+	set(value):
+		on_is_dragging_set(value)
+		is_dragging = value
+	get:
+		return is_dragging
+
 var have_drag_ability : bool
 var is_in_collider_bounds : bool
 
@@ -8,6 +14,13 @@ func _ready():
 	mouse_entered.connect(_on_mouse_entered)
 	mouse_exited.connect(_on_mouse_exited)
 
+
+func on_is_dragging_set(dragging: bool):
+	pass
+	if dragging:
+		scale = Vector2(1.1, 1.1)
+	else:
+		scale = Vector2.ONE
 
 func _on_mouse_entered():
 	is_in_collider_bounds = true
