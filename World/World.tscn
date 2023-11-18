@@ -32,6 +32,7 @@ script = ExtResource("7_ooest")
 [node name="UI" parent="." instance=ExtResource("8_bqpel")]
 
 [connection signal="transitioned" from="GameStateMachine" to="UI" method="_on_game_state_machine_transitioned"]
+[connection signal="change_level_button_pressed" from="UI" to="GameStateMachine" method="_on_ui_change_level_button_pressed"]
 [connection signal="next_level_pressed" from="UI" to="GameStateMachine" method="_on_ui_next_level_pressed"]
 [connection signal="play_button_pressed" from="UI" to="GameStateMachine" method="_on_ui_play_button_pressed"]
 [connection signal="reset_button_pressed" from="UI" to="GameStateMachine" method="_on_ui_reset_button_pressed"]

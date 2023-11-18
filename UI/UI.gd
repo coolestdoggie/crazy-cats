@@ -3,10 +3,12 @@ extends CanvasLayer
 signal play_button_pressed
 signal reset_button_pressed
 signal next_level_pressed
+signal change_level_button_pressed
 
 @export var inventory_ui : InventoryUI
 @export var in_game_ui : Control
 @export var end_level_ui : EndLevelUI
+@export var cheat_line : LineEdit
 
 func update_ui_inventory():
 	inventory_ui.update_inventory()
@@ -50,3 +52,8 @@ func enable_finish_screen():
 
 func disable_finish_screen():
 	end_level_ui.visible = false
+
+
+func _on_change_level_button_pressed():
+	LevelDataService.set_level(int(cheat_line.text))
+	change_level_button_pressed.emit()	

@@ -61,3 +61,7 @@ func _on_ui_reset_button_pressed():
 
 func _on_ui_next_level_pressed():
 	transition_to("LoadLevelState")
+
+
+func _on_ui_change_level_button_pressed():
+	transition_to("LoadLevelState")

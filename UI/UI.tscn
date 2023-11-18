@@ -6,11 +6,12 @@
 [ext_resource type="Script" path="res://UI/EndLevelUI.gd" id="4_0l7tw"]
 [ext_resource type="FontFile" uid="uid://gmqg36fdkgp2" path="res://UI/Fonts/bit_outline.ttf" id="4_cxa1n"]
 
-[node name="UI" type="CanvasLayer" node_paths=PackedStringArray("inventory_ui", "in_game_ui", "end_level_ui")]
+[node name="UI" type="CanvasLayer" node_paths=PackedStringArray("inventory_ui", "in_game_ui", "end_level_ui", "cheat_line")]
 script = ExtResource("1_cvy86")
 inventory_ui = NodePath("InGameUI/Inventory")
 in_game_ui = NodePath("InGameUI")
 end_level_ui = NodePath("EndLevelUI")
+cheat_line = NodePath("CheatConsole/HBoxContainer/CheatLine")
 
 [node name="InGameUI" type="Control" parent="."]
 layout_mode = 3
@@ -104,6 +105,31 @@ grow_vertical = 0
 layout_mode = 2
 text = "Next Level"
 
+[node name="CheatConsole" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 34.0
+offset_top = 26.0
+offset_right = 210.0
+offset_bottom = 73.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CheatConsole"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CheatLine" type="LineEdit" parent="CheatConsole/HBoxContainer"]
+layout_mode = 2
+placeholder_text = "lvl_ind"
+
+[node name="ChangeLevelButton" type="Button" parent="CheatConsole/HBoxContainer"]
+layout_mode = 2
+text = "GO"
+
 [connection signal="pressed" from="InGameUI/ControlButtons/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="InGameUI/ControlButtons/ResetButton" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="EndLevelUI/VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
+[connection signal="pressed" from="CheatConsole/HBoxContainer/ChangeLevelButton" to="." method="_on_change_level_button_pressed"]
