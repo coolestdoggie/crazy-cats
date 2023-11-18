@@ -60,13 +60,6 @@ theme_override_constants/separation = 25
 script = ExtResource("2_hxcdq")
 inventory_item_scene = ExtResource("2_tf6hq")
 
-[node name="InventoryItem" parent="InGameUI/Inventory" instance=ExtResource("2_tf6hq")]
-layout_mode = 2
-
-[node name="InventoryItem2" parent="InGameUI/Inventory" node_paths=PackedStringArray("amount_label") instance=ExtResource("2_tf6hq")]
-layout_mode = 2
-amount_label = NodePath("../InventoryItem/Label")
-
 [node name="EndLevelUI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
