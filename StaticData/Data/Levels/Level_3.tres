@@ -6,5 +6,6 @@
 script = ExtResource("1_psc2a")
 level_index = 0
 draggables_by_count = {
+"d_platform": 1,
 "pusher": 1
 }

@@ -56,18 +56,18 @@ position = Vector2(17, 48)
 scale = Vector2(1.08, 1)
 
 [node name="Platform10" parent="Environment/Static" instance=ExtResource("1_bxb50")]
-position = Vector2(-106, 64)
+position = Vector2(-107, 47)
 scale = Vector2(1.08, 1)
 
 [node name="Platform11" parent="Environment/Static" instance=ExtResource("1_bxb50")]
-position = Vector2(-34, 77)
+position = Vector2(-41, 84)
 scale = Vector2(1.08, 1)
 
 [node name="Finisher" parent="Environment/Static" instance=ExtResource("2_edw3k")]
-position = Vector2(-90, 48)
+position = Vector2(-90, 32)
 
 [node name="BoxWithIntrovert" parent="Environment/Static" instance=ExtResource("6_cwinr")]
-position = Vector2(-5, 67)
+position = Vector2(-11, 74)
 
 [node name="Dynamic" type="Node2D" parent="Environment"]
 position = Vector2(-115, -25)
