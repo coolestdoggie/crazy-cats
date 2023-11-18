@@ -17,5 +17,5 @@ func get_data_for_level(index: int) -> LevelData:
 
 
 func set_next_level():
-	current_level_index = current_level_index + 1
+	current_level_index = clamp(current_level_index + 1, 0, all_levels_data.levels_data.size() - 1)
 
