@@ -7,5 +7,5 @@
 
 [node name="Box" parent="." instance=ExtResource("1_r04in")]
 
-[node name="Introvert" parent="." instance=ExtResource("2_pak3h")]
+[node name="Introvert" parent="Box" instance=ExtResource("2_pak3h")]
 position = Vector2(0, -8)

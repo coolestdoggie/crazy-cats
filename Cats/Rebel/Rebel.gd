@@ -5,12 +5,17 @@ extends RigidBody2D
 @export var impulse_force: float
 
 var current_cooldown: float
+var started_acting : bool
 
-func _ready():
+func start_acting():
 	current_cooldown = cooldown_between_pushes
+	started_acting = true
 
 
 func _process(delta):
+	if !started_acting:
+		return
+
 	current_cooldown = current_cooldown - delta
 
 	if not raycast.collide_with_bodies or current_cooldown > 0:

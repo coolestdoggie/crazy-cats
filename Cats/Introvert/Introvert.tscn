@@ -142,8 +142,10 @@ animations = [{
 }]
 
 [node name="Introvert" type="RigidBody2D"]
+lock_rotation = true
+freeze = true
 script = ExtResource("2_otrqy")
-move_range = 10.0
+move_range = 100.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
