@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://puuhi10yh0sb"]
+
+[ext_resource type="PackedScene" uid="uid://cc8o5gttf7vtx" path="res://Cats/Introvert/Box.tscn" id="1_r04in"]
+[ext_resource type="PackedScene" uid="uid://ckutn3iptp7ke" path="res://Cats/Introvert/Introvert.tscn" id="2_pak3h"]
+
+[node name="BoxWithIntrovert" type="Node2D"]
+
+[node name="Box" parent="." instance=ExtResource("1_r04in")]
+
+[node name="Introvert" parent="." instance=ExtResource("2_pak3h")]
+position = Vector2(0, -8)

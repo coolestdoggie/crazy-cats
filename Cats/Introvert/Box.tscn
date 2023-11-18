@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cc8o5gttf7vtx"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_vh57f"]
+
+[node name="Box" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(28.5, 19.5)
+texture = SubResource("CanvasTexture_vh57f")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+polygon = PackedVector2Array(-14, -10, -14, 10, 14, 10, 14, -10, 12, 8, -12, 8)

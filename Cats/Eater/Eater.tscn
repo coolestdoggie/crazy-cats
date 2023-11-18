@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://dustb7dodr8sd"]
+
+[ext_resource type="Texture2D" uid="uid://b211705w1bqnd" path="res://Cats/Images/kitty.png" id="1_7wyja"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nd3lc"]
+size = Vector2(20, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbtij"]
+atlas = ExtResource("1_7wyja")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y85ym"]
+atlas = ExtResource("1_7wyja")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xgst"]
+atlas = ExtResource("1_7wyja")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yoir7"]
+atlas = ExtResource("1_7wyja")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_alavt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbtij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y85ym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6xgst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yoir7")
+}],
+"loop": true,
+"name": &"eater_walk",
+"speed": 5.0
+}]
+
+[node name="Eater" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_nd3lc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_alavt")
+animation = &"eater_walk"
