@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bfmguh88h5m7h" path="res://LevelObjects/Dynamic/LevelObject.tscn" id="1_2bo4y"]
 [ext_resource type="Texture2D" uid="uid://uan1614yaaoa" path="res://LevelObjects/Static/FoodObstacles/Images/Milk.png" id="2_v22uw"]
 
-[node name="MilkObstacle" instance=ExtResource("1_2bo4y")]
+[node name="MilkObstacle" groups=["food"] instance=ExtResource("1_2bo4y")]
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(0, 0)

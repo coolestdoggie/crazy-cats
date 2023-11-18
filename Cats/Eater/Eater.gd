@@ -1,11 +1,11 @@
-extends Node
+extends LevelObject
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func _on_eat_area_body_entered(body:Node2D):
+	if body.is_in_group("food"):
+		eat(body)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func eat(food):
+	await get_tree().create_timer(1.0).timeout
+	food.queue_free()

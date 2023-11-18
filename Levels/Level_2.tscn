@@ -61,5 +61,9 @@ position = Vector2(103, 33)
 [node name="Domino2" parent="Environment/Dynamic" instance=ExtResource("7_lxbtw")]
 position = Vector2(115, 33)
 
+[node name="Domino3" parent="Environment/Dynamic" node_paths=PackedStringArray("color_overlay") instance=ExtResource("7_lxbtw")]
+position = Vector2(143, 33)
+color_overlay = NodePath("../Domino2/Sprite2D/Mask")
+
 [node name="Domino5" parent="Environment/Dynamic" instance=ExtResource("7_lxbtw")]
 position = Vector2(158, 33)
