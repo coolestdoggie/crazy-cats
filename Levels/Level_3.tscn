@@ -25,49 +25,55 @@ zoom = Vector2(3.525, 3.525)
 
 [node name="Platform2" parent="Environment/Static" instance=ExtResource("1_bxb50")]
 position = Vector2(-128, -63)
-scale = Vector2(0.81, 1)
+
+[node name="Platform15" parent="Environment/Static" instance=ExtResource("1_bxb50")]
+position = Vector2(-168, -63)
 
 [node name="Platform5" parent="Environment/Static" instance=ExtResource("1_bxb50")]
-position = Vector2(36, -33)
+position = Vector2(49, -37)
 rotation = 0.509636
-scale = Vector2(0.5, 1)
 
 [node name="Platform6" parent="Environment/Static" instance=ExtResource("1_bxb50")]
-position = Vector2(77, -1)
+position = Vector2(101, 10)
 rotation = -0.509636
-scale = Vector2(0.5, 1)
 
 [node name="Platform8" parent="Environment/Static" instance=ExtResource("1_bxb50")]
-position = Vector2(75, 36)
+position = Vector2(94, 50)
 rotation = -0.509636
-scale = Vector2(0.5, 1)
 
 [node name="Platform7" parent="Environment/Static" instance=ExtResource("1_bxb50")]
-position = Vector2(37, 5)
+position = Vector2(48, 3)
 rotation = 0.509636
-scale = Vector2(0.5, 1)
 
 [node name="Platform3" parent="Environment/Static" instance=ExtResource("1_bxb50")]
 position = Vector2(-72, -34)
-scale = Vector2(1.8, 1)
+
+[node name="Platform4" parent="Environment/Static" instance=ExtResource("1_bxb50")]
+position = Vector2(-32, -34)
+
+[node name="Platform12" parent="Environment/Static" instance=ExtResource("1_bxb50")]
+position = Vector2(8, -34)
 
 [node name="Platform9" parent="Environment/Static" instance=ExtResource("1_bxb50")]
-position = Vector2(17, 47)
-scale = Vector2(1.08, 1)
+position = Vector2(55, 51)
+
+[node name="Platform13" parent="Environment/Static" instance=ExtResource("1_bxb50")]
+position = Vector2(15, 51)
+
+[node name="Platform14" parent="Environment/Static" instance=ExtResource("1_bxb50")]
+position = Vector2(-25, 51)
 
 [node name="Platform10" parent="Environment/Static" instance=ExtResource("1_bxb50")]
-position = Vector2(-107, 47)
-scale = Vector2(1.08, 1)
+position = Vector2(-108, 57)
 
 [node name="Platform11" parent="Environment/Static" instance=ExtResource("1_bxb50")]
-position = Vector2(-41, 84)
-scale = Vector2(1.08, 1)
+position = Vector2(-65, 92)
 
 [node name="Finisher" parent="Environment/Static" instance=ExtResource("2_edw3k")]
-position = Vector2(-90, 32)
+position = Vector2(-78, 41)
 
 [node name="BoxWithIntrovert" parent="Environment/Static" instance=ExtResource("6_cwinr")]
-position = Vector2(-11, 74)
+position = Vector2(-35, 82)
 
 [node name="Dynamic" type="Node2D" parent="Environment"]
 position = Vector2(-115, -25)
@@ -76,17 +82,17 @@ position = Vector2(-115, -25)
 position = Vector2(21, -48)
 
 [node name="Apple" parent="Environment/Dynamic" instance=ExtResource("4_4nr4p")]
-position = Vector2(138, -16)
+position = Vector2(141, -16)
 
 [node name="Domino" parent="Environment/Dynamic" instance=ExtResource("5_30dn5")]
-position = Vector2(69, -18)
+position = Vector2(74, -18)
 
 [node name="Domino2" parent="Environment/Dynamic" instance=ExtResource("5_30dn5")]
-position = Vector2(84, -18)
+position = Vector2(89, -18)
 
 [node name="Domino5" parent="Environment/Dynamic" instance=ExtResource("5_30dn5")]
-position = Vector2(99, -18)
+position = Vector2(104, -18)
 
 [node name="Domino6" parent="Environment/Dynamic" node_paths=PackedStringArray("color_overlay") instance=ExtResource("5_30dn5")]
-position = Vector2(114, -18)
+position = Vector2(119, -18)
 color_overlay = NodePath("../Domino5/Sprite2D/Mask")

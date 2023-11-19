@@ -24,11 +24,10 @@ zoom = Vector2(3.525, 3.525)
 [node name="Static" type="Node2D" parent="Environment"]
 
 [node name="Platform" parent="Environment/Static" instance=ExtResource("3_xhgb3")]
-position = Vector2(-159, -15)
+position = Vector2(-166, -15)
 
 [node name="Platform2" parent="Environment/Static" instance=ExtResource("3_xhgb3")]
-position = Vector2(-117, -15)
-scale = Vector2(0.81, 1)
+position = Vector2(-126, -15)
 
 [node name="Platform5" parent="Environment/Static" instance=ExtResource("3_xhgb3")]
 position = Vector2(-84, -21)

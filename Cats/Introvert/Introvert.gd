@@ -12,5 +12,5 @@ func start_acting():
 func push_up_animation():
 	var tween = create_tween().set_loops()
 	
-	tween.tween_property(self, "position:y", end_y, 0.1).set_delay(3)
-	tween.tween_property(self, "position:y", start_y, 0.1).set_delay(3)
+	tween.tween_property(self, "position:y", end_y, 0.1).set_delay(2.5)
+	tween.tween_property(self, "position:y", start_y, 0.1).set_delay(2)
