@@ -47,6 +47,9 @@ scale = Vector2(0.425, 1)
 [node name="Finisher" parent="Environment/Static" instance=ExtResource("2_n7g8j")]
 position = Vector2(91, 21)
 
+[node name="AnimatedSprite2D" parent="Environment/Static/Finisher" index="1"]
+flip_h = true
+
 [node name="Pusher" parent="Environment/Static" instance=ExtResource("7_mq222")]
 position = Vector2(-112, -31)
 
@@ -67,3 +70,5 @@ position = Vector2(129, 33)
 
 [node name="Domino5" parent="Environment/Dynamic" instance=ExtResource("7_bqddp")]
 position = Vector2(158, 33)
+
+[editable path="Environment/Static/Finisher"]
