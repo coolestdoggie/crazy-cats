@@ -24,25 +24,28 @@ zoom = Vector2(3.525, 3.525)
 [node name="Static" type="Node2D" parent="Environment"]
 
 [node name="Platform" parent="Environment/Static" instance=ExtResource("3_xhgb3")]
-position = Vector2(-147, -15)
-scale = Vector2(0.425, 1)
+position = Vector2(-159, -15)
 
 [node name="Platform2" parent="Environment/Static" instance=ExtResource("3_xhgb3")]
-position = Vector2(-122, -15)
+position = Vector2(-117, -15)
 scale = Vector2(0.81, 1)
 
 [node name="Platform5" parent="Environment/Static" instance=ExtResource("3_xhgb3")]
-position = Vector2(-72, -14)
+position = Vector2(-84, -21)
 rotation = 0.701622
-scale = Vector2(0.81, 1)
+
+[node name="Platform6" parent="Environment/Static" instance=ExtResource("3_xhgb3")]
+position = Vector2(-57, 9)
+rotation = 0.181514
 
 [node name="Platform3" parent="Environment/Static" instance=ExtResource("3_xhgb3")]
-position = Vector2(-35, 17)
-scale = Vector2(1.8, 1)
+position = Vector2(-18, 18)
+
+[node name="Platform7" parent="Environment/Static" instance=ExtResource("3_xhgb3")]
+position = Vector2(22, 18)
 
 [node name="Platform4" parent="Environment/Static" instance=ExtResource("3_xhgb3")]
-position = Vector2(79, 37)
-scale = Vector2(0.425, 1)
+position = Vector2(62, 37)
 
 [node name="Finisher" parent="Environment/Static" instance=ExtResource("2_n7g8j")]
 position = Vector2(91, 21)
@@ -63,12 +66,12 @@ position = Vector2(25, 0)
 position = Vector2(183, 36)
 
 [node name="Domino" parent="Environment/Dynamic" instance=ExtResource("7_bqddp")]
-position = Vector2(103, 33)
+position = Vector2(109, 34)
 
 [node name="Domino2" parent="Environment/Dynamic" instance=ExtResource("7_bqddp")]
-position = Vector2(129, 33)
+position = Vector2(134, 34)
 
 [node name="Domino5" parent="Environment/Dynamic" instance=ExtResource("7_bqddp")]
-position = Vector2(158, 33)
+position = Vector2(158, 34)
 
 [editable path="Environment/Static/Finisher"]
