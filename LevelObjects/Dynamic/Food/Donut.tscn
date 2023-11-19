@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ddbex485bhdmx"]
 
-[ext_resource type="Texture2D" uid="uid://ddp81kt18i6sr" path="res://LevelObjects/Dynamic/Balls/Images/tennis.png" id="1_siws4"]
+[ext_resource type="Texture2D" uid="uid://wl4pu3gie72v" path="res://LevelObjects/Dynamic/Food/Images/donut.png" id="1_ui8nl"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_heh28"]
 bounce = 0.5
@@ -8,13 +8,14 @@ bounce = 0.5
 [sub_resource type="CircleShape2D" id="CircleShape2D_xkh0n"]
 radius = 6.0
 
-[node name="Apple" type="RigidBody2D" groups=["food"]]
+[node name="Donut" type="RigidBody2D" groups=["food"]]
 mass = 0.1
 physics_material_override = SubResource("PhysicsMaterial_heh28")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_siws4")
+position = Vector2(-8.34465e-07, -8.34465e-07)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_ui8nl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_xkh0n")
