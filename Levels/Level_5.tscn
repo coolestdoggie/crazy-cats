@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://vaxblbt1cguo" path="res://LevelObjects/Static/Platform/Platform.tscn" id="1_2wlmv"]
 [ext_resource type="PackedScene" uid="uid://h7ki5opejbw4" path="res://Cats/Finisher/Finisher.tscn" id="2_nm8ct"]
 [ext_resource type="PackedScene" uid="uid://cqu8bbbic337r" path="res://Cats/FatCat/FatCat.tscn" id="3_b3cgp"]
-[ext_resource type="PackedScene" path="res://LevelObjects/Dynamic/DynamicPlatform.tscn" id="5_ogk1w"]
-[ext_resource type="PackedScene" path="res://LevelObjects/Dynamic/Food/Cake.tscn" id="6_atwgq"]
-[ext_resource type="PackedScene" path="res://LevelObjects/Dynamic/Food/SwingTriangle.tscn" id="7_p8uuu"]
+[ext_resource type="PackedScene" uid="uid://bouomcgdm8t0d" path="res://LevelObjects/Dynamic/DynamicPlatform.tscn" id="5_ogk1w"]
+[ext_resource type="PackedScene" uid="uid://pnwmpuhoxync" path="res://LevelObjects/Dynamic/Food/Cake.tscn" id="6_atwgq"]
+[ext_resource type="PackedScene" uid="uid://g1ldemah70t2" path="res://LevelObjects/Dynamic/Food/SwingTriangle.tscn" id="7_p8uuu"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_022ln"]
 load_path = "res://.godot/imported/Platform_Uncolored.png-d2ac8a493adfd9242144b7daf613f593.ctex"
@@ -68,6 +68,9 @@ scale = Vector2(0.6, 1)
 [node name="Finisher" parent="Environment/Static" instance=ExtResource("2_nm8ct")]
 position = Vector2(47, 52)
 
+[node name="AnimatedSprite2D" parent="Environment/Static/Finisher" index="1"]
+flip_h = true
+
 [node name="Dynamic" type="Node2D" parent="Environment"]
 position = Vector2(-115, -25)
 
@@ -92,4 +95,5 @@ shape = SubResource("RectangleShape2D_1jvis")
 [node name="SwingTriangle" parent="Environment/Dynamic" instance=ExtResource("7_p8uuu")]
 position = Vector2(28, 77)
 
+[editable path="Environment/Static/Finisher"]
 [editable path="Environment/Dynamic/DynamicPlatform"]
