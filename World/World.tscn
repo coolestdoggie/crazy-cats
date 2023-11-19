@@ -44,7 +44,7 @@ script = ExtResource("7_ooest")
 
 [node name="BG Music" type="AudioStreamPlayer2D" parent="."]
 script = ExtResource("12_48yo2")
-audio_files = [ExtResource("12_fodr4"), ExtResource("14_0aack"), ExtResource("15_0i2ku"), ExtResource("16_sih3f"), ExtResource("17_4wkq1"), ExtResource("18_0r5qj"), ExtResource("19_phrcg"), ExtResource("20_0ba10")]
+audio_files = Array[AudioStreamWAV]([ExtResource("12_fodr4"), ExtResource("14_0aack"), ExtResource("15_0i2ku"), ExtResource("16_sih3f"), ExtResource("17_4wkq1"), ExtResource("18_0r5qj"), ExtResource("19_phrcg"), ExtResource("20_0ba10")])
 
 [connection signal="transitioned" from="GameStateMachine" to="UI" method="_on_game_state_machine_transitioned"]
 [connection signal="change_level_button_pressed" from="UI" to="GameStateMachine" method="_on_ui_change_level_button_pressed"]
