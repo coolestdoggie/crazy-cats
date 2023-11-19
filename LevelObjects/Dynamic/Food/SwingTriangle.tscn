@@ -1,17 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://g1ldemah70t2"]
 
+[ext_resource type="Texture2D" uid="uid://bw5wfmq5anogi" path="res://LevelObjects/Dynamic/Food/watermelon.png" id="1_e2j6j"]
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lyqe6"]
 bounce = 0.5
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f8mqk"]
-load_path = "res://.godot/imported/tennis.png-a91f3e9965e7cfd900cb42f42428ea2c.ctex"
 
 [node name="SwingTriangle" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_lyqe6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
-texture = SubResource("CompressedTexture2D_f8mqk")
+position = Vector2(0, -10)
+texture = ExtResource("1_e2j6j")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 build_mode = 1
