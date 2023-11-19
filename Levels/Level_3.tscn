@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://vaxblbt1cguo" path="res://LevelObjects/Static/Platform/Platform.tscn" id="1_bxb50"]
 [ext_resource type="PackedScene" uid="uid://h7ki5opejbw4" path="res://Cats/Finisher/Finisher.tscn" id="2_edw3k"]
 [ext_resource type="PackedScene" uid="uid://cpavkypjxix3e" path="res://LevelObjects/Dynamic/Balls/Ball.tscn" id="3_ct03g"]
-[ext_resource type="PackedScene" uid="uid://ddbex485bhdmx" path="res://LevelObjects/Dynamic/Food/Apple.tscn" id="4_4nr4p"]
+[ext_resource type="PackedScene" uid="uid://tv0nmvfpcwk7" path="res://LevelObjects/Dynamic/Food/Donut.tscn" id="4_4nr4p"]
 [ext_resource type="PackedScene" uid="uid://bfmguh88h5m7h" path="res://LevelObjects/Dynamic/LevelObject.tscn" id="5_30dn5"]
 [ext_resource type="PackedScene" uid="uid://puuhi10yh0sb" path="res://Cats/Introvert/BoxWithIntrovert.tscn" id="6_cwinr"]
 
