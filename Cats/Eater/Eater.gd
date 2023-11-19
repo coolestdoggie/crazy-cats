@@ -1,6 +1,7 @@
 class_name Eater extends LevelObject
 
 @export var collision_shape : CollisionShape2D
+@export var animated_sprite : AnimatedSprite2D
 var jumped : bool
 
 func _on_eat_area_body_entered(body:Node2D):
@@ -12,7 +13,10 @@ func _on_eat_area_body_entered(body:Node2D):
 
 func eat(food):
 	await get_tree().create_timer(1.0).timeout
+	animated_sprite.play("eat")
 	food.queue_free()
+	await animated_sprite.animation_finished
+	animated_sprite.play("idle")
 
 
 func jump(body: Node2D):

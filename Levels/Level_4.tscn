@@ -23,18 +23,13 @@ zoom = Vector2(3.525, 3.525)
 
 [node name="Static" type="Node2D" parent="Environment"]
 
-[node name="Platform2" parent="Environment/Static" instance=ExtResource("1_qapvm")]
-position = Vector2(-153, -80)
-rotation = 0.593412
-scale = Vector2(0.635, 1)
-
 [node name="Platform12" parent="Environment/Static" instance=ExtResource("1_qapvm")]
 position = Vector2(-149, -37)
 rotation = 0.593412
 scale = Vector2(0.635, 1)
 
 [node name="Platform4" parent="Environment/Static" instance=ExtResource("1_qapvm")]
-position = Vector2(-104, -45)
+position = Vector2(-96, -78)
 rotation = -0.593412
 scale = Vector2(0.635, 1)
 
@@ -53,7 +48,7 @@ position = Vector2(-118, -13)
 scale = Vector2(1.8, 1)
 
 [node name="Platform5" parent="Environment/Static" instance=ExtResource("1_qapvm")]
-position = Vector2(-8, -13)
+position = Vector2(-10, -13)
 scale = Vector2(1.8, 1)
 
 [node name="Platform9" parent="Environment/Static" instance=ExtResource("1_qapvm")]
@@ -93,7 +88,7 @@ position = Vector2(189, 3)
 mass = 3.0
 
 [node name="Ball" parent="Environment/Dynamic" instance=ExtResource("4_o746g")]
-position = Vector2(-18, -55)
+position = Vector2(39, -80)
 
 [node name="Apple" parent="Environment/Dynamic" instance=ExtResource("5_fmsmo")]
 position = Vector2(48, 77)

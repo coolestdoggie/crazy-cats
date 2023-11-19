@@ -140,7 +140,7 @@ shape = SubResource("CircleShape2D_1uj66")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4gcbd")
-animation = &"explode"
+animation = &"eat"
 autoplay = "idle"
 
 [node name="RayCast2D" type="RayCast2D" parent="."]

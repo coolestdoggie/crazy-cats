@@ -1,44 +1,42 @@
-[gd_scene load_steps=11 format=3 uid="uid://dustb7dodr8sd"]
+[gd_scene load_steps=10 format=3 uid="uid://dustb7dodr8sd"]
 
-[ext_resource type="Texture2D" uid="uid://b211705w1bqnd" path="res://Cats/Images/kitty.png" id="1_7wyja"]
 [ext_resource type="Script" path="res://Cats/Eater/Eater.gd" id="1_lw0ix"]
+[ext_resource type="Texture2D" uid="uid://dohkdtqkwx4tf" path="res://Cats/Eater/eater.png" id="2_5qe88"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rjtbk"]
 height = 20.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wbtij"]
-atlas = ExtResource("1_7wyja")
+[sub_resource type="AtlasTexture" id="AtlasTexture_7t3m1"]
+atlas = ExtResource("2_5qe88")
 region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y85ym"]
-atlas = ExtResource("1_7wyja")
-region = Rect2(32, 32, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_dp6gm"]
+atlas = ExtResource("2_5qe88")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6xgst"]
-atlas = ExtResource("1_7wyja")
-region = Rect2(64, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yoir7"]
-atlas = ExtResource("1_7wyja")
-region = Rect2(96, 32, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dsli"]
+atlas = ExtResource("2_5qe88")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_alavt"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wbtij")
+"texture": SubResource("AtlasTexture_7t3m1")
+}],
+"loop": false,
+"name": &"eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dp6gm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_y85ym")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6xgst")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yoir7")
+"texture": SubResource("AtlasTexture_4dsli")
 }],
 "loop": true,
-"name": &"idle_right",
+"name": &"idle",
 "speed": 5.0
 }]
 
@@ -47,11 +45,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrte6"]
 size = Vector2(56.5, 25)
 
-[node name="Eater" type="RigidBody2D" node_paths=PackedStringArray("collision_shape", "color_overlay")]
+[node name="Eater" type="RigidBody2D" node_paths=PackedStringArray("collision_shape", "animated_sprite", "color_overlay")]
 max_contacts_reported = 3
 contact_monitor = true
 script = ExtResource("1_lw0ix")
 collision_shape = NodePath("CollisionShape2D")
+animated_sprite = NodePath("AnimatedSprite2D")
 color_overlay = NodePath("AnimatedSprite2D/Mask")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -62,7 +61,8 @@ shape = SubResource("CapsuleShape2D_rjtbk")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 clip_children = 2
 sprite_frames = SubResource("SpriteFrames_alavt")
-animation = &"idle_right"
+animation = &"idle"
+autoplay = "idle"
 
 [node name="Mask" type="Sprite2D" parent="AnimatedSprite2D"]
 visible = false

@@ -4,13 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://cc8o5gttf7vtx" path="res://Cats/Introvert/Box.tscn" id="1_r04in"]
 [ext_resource type="PackedScene" uid="uid://ckutn3iptp7ke" path="res://Cats/Introvert/Introvert.tscn" id="2_pak3h"]
 [ext_resource type="Texture2D" uid="uid://3fkt083loyk8" path="res://Cats/Introvert/box.png" id="3_tafam"]
+[ext_resource type="Texture2D" uid="uid://d15bxbmwejm8c" path="res://Cats/Introvert/whole_box.png" id="5_scl40"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_g8b3g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nq8ry"]
 size = Vector2(28, 20)
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_auxdc"]
 
 [node name="BoxWithIntrovert" type="RigidBody2D" node_paths=PackedStringArray("color_overlay")]
 collision_layer = 2147483648
@@ -48,8 +47,9 @@ shape = SubResource("RectangleShape2D_nq8ry")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(7.15256e-07, 4.76837e-07)
-scale = Vector2(28, 20)
-texture = SubResource("CanvasTexture_auxdc")
+position = Vector2(0, -6)
+texture = ExtResource("5_scl40")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
 
 [editable path="Box/Introvert"]
