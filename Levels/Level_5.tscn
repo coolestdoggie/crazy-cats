@@ -31,42 +31,51 @@ zoom = Vector2(3.525, 3.525)
 
 [node name="Platform2" parent="Environment/Static" instance=ExtResource("1_2wlmv")]
 position = Vector2(-142, -62)
-scale = Vector2(0.67, 1)
+
+[node name="Platform4" parent="Environment/Static" instance=ExtResource("1_2wlmv")]
+position = Vector2(-182, -62)
 
 [node name="Platform7" parent="Environment/Static" instance=ExtResource("1_2wlmv")]
-position = Vector2(63, -40)
+position = Vector2(63, -35)
 rotation = -0.308923
-scale = Vector2(0.77, 1)
 
 [node name="Platform8" parent="Environment/Static" instance=ExtResource("1_2wlmv")]
-position = Vector2(-12, -54)
+position = Vector2(-15, -54)
 rotation = 0.308923
-scale = Vector2(0.77, 1)
 
 [node name="Platform3" parent="Environment/Static" instance=ExtResource("1_2wlmv")]
-position = Vector2(32, -40)
+position = Vector2(34, -46)
 rotation = 1.5708
-scale = Vector2(1.8, 1)
+
+[node name="Platform9" parent="Environment/Static" instance=ExtResource("1_2wlmv")]
+position = Vector2(34, -6)
+rotation = 1.5708
 
 [node name="Platform5" parent="Environment/Static" instance=ExtResource("1_2wlmv")]
-position = Vector2(62, 68)
+position = Vector2(71, 14)
 rotation = -1.5708
-scale = Vector2(1.8, 1)
+
+[node name="Platform6" parent="Environment/Static" instance=ExtResource("1_2wlmv")]
+position = Vector2(71, 54)
+rotation = -1.5708
 
 [node name="Platform10" parent="Environment/Static" instance=ExtResource("1_2wlmv")]
-position = Vector2(-156, 59)
-scale = Vector2(1.08, 1)
+position = Vector2(-138, 59)
 
 [node name="Platform12" parent="Environment/Static" instance=ExtResource("1_2wlmv")]
-position = Vector2(-92, 59)
-scale = Vector2(1.08, 1)
+position = Vector2(-98, 59)
+
+[node name="Platform13" parent="Environment/Static" instance=ExtResource("1_2wlmv")]
+position = Vector2(-58, 59)
+
+[node name="Platform14" parent="Environment/Static" instance=ExtResource("1_2wlmv")]
+position = Vector2(-178, 59)
 
 [node name="Platform11" parent="Environment/Static" instance=ExtResource("1_2wlmv")]
-position = Vector2(28, 68)
-scale = Vector2(0.6, 1)
+position = Vector2(23, 56)
 
 [node name="Finisher" parent="Environment/Static" instance=ExtResource("2_nm8ct")]
-position = Vector2(47, 52)
+position = Vector2(53, 40)
 
 [node name="AnimatedSprite2D" parent="Environment/Static/Finisher" index="1"]
 flip_h = true
