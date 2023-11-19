@@ -1,24 +1,20 @@
-extends Node2D
+extends AudioStreamPlayer2D
 
-var audio_files = [
-	"res://Music/BGs/BG-1.wav",
-	"res://Music/BGs/BG-2.wav",
-	"res://Music/BGs/BG-3.wav",
-	"res://Music/BGs/BG-4.wav",
-	"res://Music/BGs/BG-5.wav",
-	"res://Music/BGs/BG-6.wav",
-	"res://Music/BGs/BG-7.wav",
-	"res://Music/BGs/BG-8.wav"]
+@export var audio_files : Array[AudioStreamWAV]
+var current_index : int = 0
 	
 
 func _ready():
-	for audio_file in audio_files
-		var audio_stream_player = AudioStreamPlayer.new()
-		audio_stream_player.stream = preload(audio_files[0])
-		audio_stream_player.play()
-		add_child(audio_stream_player)
+	current_index = randi_range(0, audio_files.size()-1)
+	play_current_track()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func play_current_track():
+	stream = audio_files[current_index]
+	play()
+	
+func _on_finished():
+	current_index = current_index + 1
+	if current_index == audio_files.size():
+		current_index = 0
+		
+	play_current_track()

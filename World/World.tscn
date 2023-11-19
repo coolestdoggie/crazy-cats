@@ -1,17 +1,25 @@
-[gd_scene load_steps=13 format=3 uid="uid://c42fqx8kandh8"]
+[gd_scene load_steps=21 format=3 uid="uid://c42fqx8kandh8"]
 
 [ext_resource type="Script" path="res://Infrastructure/StateMachine.gd" id="1_5lvt3"]
 [ext_resource type="Script" path="res://Infrastructure/GameStates/PlanningState.gd" id="2_82783"]
 [ext_resource type="Script" path="res://Infrastructure/GameStates/LoadLevelState.gd" id="2_md78k"]
 [ext_resource type="Script" path="res://Infrastructure/GameStates/PlayState.gd" id="3_xojuj"]
 [ext_resource type="PackedScene" uid="uid://d3g8vqp4svx13" path="res://Levels/Level_2.tscn" id="4_pu0km"]
-[ext_resource type="PackedScene" path="res://Levels/Level_3.tscn" id="5_e2n4v"]
+[ext_resource type="PackedScene" uid="uid://tlfdt2vh8dq6" path="res://Levels/Level_3.tscn" id="5_e2n4v"]
 [ext_resource type="PackedScene" uid="uid://bspelakc6vbau" path="res://Levels/Level_1.tscn" id="5_m6ykv"]
-[ext_resource type="PackedScene" path="res://Levels/Level_4.tscn" id="6_6svqn"]
-[ext_resource type="PackedScene" path="res://Levels/Level_5.tscn" id="7_c2sk2"]
+[ext_resource type="PackedScene" uid="uid://dnjgvutscbje8" path="res://Levels/Level_4.tscn" id="6_6svqn"]
+[ext_resource type="PackedScene" uid="uid://c8opgdhhnovk6" path="res://Levels/Level_5.tscn" id="7_c2sk2"]
 [ext_resource type="Script" path="res://Infrastructure/GameStates/FinishState.gd" id="7_ooest"]
 [ext_resource type="PackedScene" uid="uid://cotmb588ghw1a" path="res://UI/UI.tscn" id="8_bqpel"]
 [ext_resource type="Script" path="res://World/BackgroundMusic.gd" id="12_48yo2"]
+[ext_resource type="AudioStream" uid="uid://ciurxygfqtx4b" path="res://Music/BGs/BG-1.wav" id="12_fodr4"]
+[ext_resource type="AudioStream" uid="uid://hrnjgd5nxx5a" path="res://Music/BGs/BG-2.wav" id="14_0aack"]
+[ext_resource type="AudioStream" uid="uid://br0ceeayt0n5g" path="res://Music/BGs/BG-3.wav" id="15_0i2ku"]
+[ext_resource type="AudioStream" uid="uid://cglf6v8t0dey0" path="res://Music/BGs/BG-4.wav" id="16_sih3f"]
+[ext_resource type="AudioStream" uid="uid://dqpbwslq8hd3s" path="res://Music/BGs/BG-5.wav" id="17_4wkq1"]
+[ext_resource type="AudioStream" uid="uid://btxi1778nrar2" path="res://Music/BGs/BG-6.wav" id="18_0r5qj"]
+[ext_resource type="AudioStream" uid="uid://botiu0ysjmt4k" path="res://Music/BGs/BG-7.wav" id="19_phrcg"]
+[ext_resource type="AudioStream" uid="uid://dx3gvrivtevim" path="res://Music/BGs/BG-8.wav" id="20_0ba10"]
 
 [node name="World" type="Node2D"]
 
@@ -36,9 +44,11 @@ script = ExtResource("7_ooest")
 
 [node name="BG Music" type="AudioStreamPlayer2D" parent="."]
 script = ExtResource("12_48yo2")
+audio_files = [ExtResource("12_fodr4"), ExtResource("14_0aack"), ExtResource("15_0i2ku"), ExtResource("16_sih3f"), ExtResource("17_4wkq1"), ExtResource("18_0r5qj"), ExtResource("19_phrcg"), ExtResource("20_0ba10")]
 
 [connection signal="transitioned" from="GameStateMachine" to="UI" method="_on_game_state_machine_transitioned"]
 [connection signal="change_level_button_pressed" from="UI" to="GameStateMachine" method="_on_ui_change_level_button_pressed"]
 [connection signal="next_level_pressed" from="UI" to="GameStateMachine" method="_on_ui_next_level_pressed"]
 [connection signal="play_button_pressed" from="UI" to="GameStateMachine" method="_on_ui_play_button_pressed"]
 [connection signal="reset_button_pressed" from="UI" to="GameStateMachine" method="_on_ui_reset_button_pressed"]
+[connection signal="finished" from="BG Music" to="BG Music" method="_on_finished"]

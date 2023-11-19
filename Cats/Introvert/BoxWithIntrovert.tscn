@@ -23,6 +23,7 @@ color_overlay = NodePath("Box/Introvert/AnimatedSprite2D/Mask")
 [node name="Box" parent="." instance=ExtResource("1_r04in")]
 
 [node name="Introvert" parent="Box" instance=ExtResource("2_pak3h")]
+show_behind_parent = true
 position = Vector2(0, -8)
 
 [node name="AnimatedSprite2D" parent="Box/Introvert" index="1"]
