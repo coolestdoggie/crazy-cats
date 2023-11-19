@@ -60,7 +60,7 @@ position = Vector2(-115, -25)
 position = Vector2(25, 0)
 
 [node name="Donut" parent="Environment/Dynamic" instance=ExtResource("5_sssms")]
-position = Vector2(183, 35)
+position = Vector2(183, 36)
 
 [node name="Domino" parent="Environment/Dynamic" instance=ExtResource("7_bqddp")]
 position = Vector2(103, 33)
