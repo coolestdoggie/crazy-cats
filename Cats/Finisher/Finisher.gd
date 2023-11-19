@@ -13,6 +13,7 @@ func _on_body_entered(body:Node):
 	launch_animation()
 
 	body.queue_free()
+	await get_tree().create_timer(3.0).timeout
 	bulb_popup.activate_bubble()
 	await get_tree().create_timer(3.0).timeout
 	text_popup.activate_bubble()
