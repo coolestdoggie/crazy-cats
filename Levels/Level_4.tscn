@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://h7ki5opejbw4" path="res://Cats/Finisher/Finisher.tscn" id="2_asdrj"]
 [ext_resource type="PackedScene" uid="uid://cpavkypjxix3e" path="res://LevelObjects/Dynamic/Balls/Ball.tscn" id="4_o746g"]
 [ext_resource type="PackedScene" uid="uid://ddbex485bhdmx" path="res://LevelObjects/Dynamic/Food/Donut.tscn" id="5_fmsmo"]
-[ext_resource type="PackedScene" uid="uid://b0m3f57o48xy4" path="res://LevelObjects/Dynamic/FoodObstacles/MilkObstacle.tscn" id="5_ywerj"]
 [ext_resource type="PackedScene" uid="uid://cc8o5gttf7vtx" path="res://Cats/Introvert/Box.tscn" id="6_b05c0"]
+[ext_resource type="PackedScene" uid="uid://pnwmpuhoxync" path="res://LevelObjects/Dynamic/Food/Cake.tscn" id="6_cu6r4"]
 
 [node name="Level_4" type="Node2D"]
 
@@ -24,55 +24,58 @@ zoom = Vector2(3.525, 3.525)
 [node name="Static" type="Node2D" parent="Environment"]
 
 [node name="Platform12" parent="Environment/Static" instance=ExtResource("1_qapvm")]
-position = Vector2(-149, -37)
+position = Vector2(-147, -65)
 rotation = 0.593412
-scale = Vector2(0.635, 1)
 
 [node name="Platform4" parent="Environment/Static" instance=ExtResource("1_qapvm")]
 position = Vector2(-96, -78)
 rotation = -0.593412
-scale = Vector2(0.635, 1)
 
 [node name="Platform6" parent="Environment/Static" instance=ExtResource("1_qapvm")]
-position = Vector2(105, 16)
+position = Vector2(111, 37)
 rotation = -0.509636
-scale = Vector2(0.5, 1)
 
 [node name="Platform7" parent="Environment/Static" instance=ExtResource("1_qapvm")]
-position = Vector2(-66, 35)
-rotation = -0.308923
-scale = Vector2(0.77, 1)
+position = Vector2(-49, 32)
 
 [node name="Platform3" parent="Environment/Static" instance=ExtResource("1_qapvm")]
-position = Vector2(-118, -13)
-scale = Vector2(1.8, 1)
+position = Vector2(-106, -21)
+
+[node name="Platform16" parent="Environment/Static" instance=ExtResource("1_qapvm")]
+position = Vector2(-66, -21)
 
 [node name="Platform5" parent="Environment/Static" instance=ExtResource("1_qapvm")]
-position = Vector2(-10, -13)
-scale = Vector2(1.8, 1)
+position = Vector2(-26, -21)
+
+[node name="Platform17" parent="Environment/Static" instance=ExtResource("1_qapvm")]
+position = Vector2(14, -21)
+
+[node name="Platform8" parent="Environment/Static" instance=ExtResource("1_qapvm")]
+position = Vector2(54, -21)
 
 [node name="Platform9" parent="Environment/Static" instance=ExtResource("1_qapvm")]
-position = Vector2(43, 20)
-scale = Vector2(1.08, 1)
+position = Vector2(71, 32)
+
+[node name="Platform15" parent="Environment/Static" instance=ExtResource("1_qapvm")]
+position = Vector2(31, 32)
 
 [node name="Platform13" parent="Environment/Static" instance=ExtResource("1_qapvm")]
-position = Vector2(-22, 20)
-scale = Vector2(1.08, 1)
+position = Vector2(-9, 32)
 
 [node name="Platform10" parent="Environment/Static" instance=ExtResource("1_qapvm")]
-position = Vector2(-123, 59)
-scale = Vector2(1.08, 1)
+position = Vector2(-83, 67)
+
+[node name="Platform18" parent="Environment/Static" instance=ExtResource("1_qapvm")]
+position = Vector2(-123, 67)
 
 [node name="Platform11" parent="Environment/Static" instance=ExtResource("1_qapvm")]
-position = Vector2(-53, 84)
-scale = Vector2(1.08, 1)
+position = Vector2(-36, 90)
 
 [node name="Platform14" parent="Environment/Static" instance=ExtResource("1_qapvm")]
 position = Vector2(93, -65)
-scale = Vector2(1.08, 1)
 
 [node name="Finisher" parent="Environment/Static" instance=ExtResource("2_asdrj")]
-position = Vector2(-24, 68)
+position = Vector2(-6, 74)
 
 [node name="AnimatedSprite2D" parent="Environment/Static/Finisher" index="1"]
 flip_h = true
@@ -83,14 +86,13 @@ position = Vector2(-115, -25)
 [node name="Box" parent="Environment/Dynamic" instance=ExtResource("6_b05c0")]
 position = Vector2(243, -50)
 
-[node name="MilkObstacle" parent="Environment/Dynamic" instance=ExtResource("5_ywerj")]
-position = Vector2(189, 3)
-mass = 3.0
-
 [node name="Ball" parent="Environment/Dynamic" instance=ExtResource("4_o746g")]
 position = Vector2(39, -80)
 
 [node name="Apple" parent="Environment/Dynamic" instance=ExtResource("5_fmsmo")]
-position = Vector2(48, 77)
+position = Vector2(75, 86)
+
+[node name="Cake" parent="." instance=ExtResource("6_cu6r4")]
+position = Vector2(81, -27)
 
 [editable path="Environment/Static/Finisher"]
