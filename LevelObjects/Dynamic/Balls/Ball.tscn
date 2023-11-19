@@ -1,21 +1,23 @@
 [gd_scene load_steps=5 format=3 uid="uid://cpavkypjxix3e"]
 
 [ext_resource type="PackedScene" uid="uid://bfmguh88h5m7h" path="res://LevelObjects/Dynamic/LevelObject.tscn" id="1_jwu4p"]
-[ext_resource type="Texture2D" uid="uid://buuu5itidvp33" path="res://LevelObjects/Dynamic/Balls/Images/basketball.png" id="2_gr35k"]
+[ext_resource type="Texture2D" uid="uid://dkpbruo11aacg" path="res://LevelObjects/Dynamic/Balls/Images/knitball.png" id="2_oxuv4"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_eqmyu"]
 bounce = 0.8
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bkio0"]
-radius = 9.00347
 
 [node name="Ball" groups=["ball"] instance=ExtResource("1_jwu4p")]
 physics_material_override = SubResource("PhysicsMaterial_eqmyu")
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(0, 0)
-scale = Vector2(0.287, 0.292)
-texture = ExtResource("2_gr35k")
+scale = Vector2(1, 1)
+texture = ExtResource("2_oxuv4")
+centered = false
+offset = Vector2(-16, -22)
 
 [node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0)
 shape = SubResource("CircleShape2D_bkio0")
