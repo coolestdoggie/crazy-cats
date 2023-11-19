@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://pnwmpuhoxync"]
+
+[ext_resource type="Texture2D" uid="uid://bdpks71hchkyb" path="res://LevelObjects/Dynamic/Balls/Images/baseball.png" id="1_gnsig"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c2nuv"]
+bounce = 0.5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8f6fw"]
+size = Vector2(12, 12)
+
+[node name="Cake" type="RigidBody2D" groups=["food"]]
+mass = 0.01
+physics_material_override = SubResource("PhysicsMaterial_c2nuv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_gnsig")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8f6fw")

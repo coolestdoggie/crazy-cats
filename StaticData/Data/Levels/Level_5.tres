@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://bvdthk5phwsti"]
+
+[ext_resource type="Script" path="res://StaticData/Scripts/LevelStaticData.gd" id="1_rn4on"]
+
+[resource]
+script = ExtResource("1_rn4on")
+level_index = 0
+draggables_by_count = {
+"eater": 1,
+"introvert": 1
+}

@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqu8bbbic337r"]
+
+[ext_resource type="PackedScene" uid="uid://bfmguh88h5m7h" path="res://LevelObjects/Dynamic/LevelObject.tscn" id="1_xwt5i"]
+[ext_resource type="Texture2D" uid="uid://td0rtxabkg6u" path="res://LevelObjects/Dynamic/Balls/Images/football.png" id="2_ii4xu"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u6hmc"]
+bounce = 0.3
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_28vvj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vi8po"]
+radius = 9.00347
+
+[node name="FatCat" groups=["fat_cat"] instance=ExtResource("1_xwt5i")]
+mass = 60.0
+physics_material_override = SubResource("PhysicsMaterial_u6hmc")
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, 0)
+scale = Vector2(0.287, 0.292)
+texture = ExtResource("2_ii4xu")
+
+[node name="Mask" parent="Sprite2D" index="0"]
+texture = SubResource("CanvasTexture_28vvj")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_vi8po")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c42fqx8kandh8"]
+[gd_scene load_steps=12 format=3 uid="uid://c42fqx8kandh8"]
 
 [ext_resource type="Script" path="res://Infrastructure/StateMachine.gd" id="1_5lvt3"]
 [ext_resource type="Script" path="res://Infrastructure/GameStates/PlanningState.gd" id="2_82783"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://tlfdt2vh8dq6" path="res://Levels/Level_3.tscn" id="5_e2n4v"]
 [ext_resource type="PackedScene" uid="uid://bspelakc6vbau" path="res://Levels/Level_1.tscn" id="5_m6ykv"]
 [ext_resource type="PackedScene" uid="uid://dnjgvutscbje8" path="res://Levels/Level_4.tscn" id="6_6svqn"]
+[ext_resource type="PackedScene" uid="uid://bqbbpcvq4ncjy" path="res://Levels/Level_5.tscn" id="7_c2sk2"]
 [ext_resource type="Script" path="res://Infrastructure/GameStates/FinishState.gd" id="7_ooest"]
 [ext_resource type="PackedScene" uid="uid://cotmb588ghw1a" path="res://UI/UI.tscn" id="8_bqpel"]
 
@@ -19,7 +20,7 @@ initial_state = NodePath("LoadLevelState")
 
 [node name="LoadLevelState" type="Node2D" parent="GameStateMachine"]
 script = ExtResource("2_md78k")
-levels = Array[PackedScene]([ExtResource("5_m6ykv"), ExtResource("4_pu0km"), ExtResource("5_e2n4v"), ExtResource("6_6svqn")])
+levels = Array[PackedScene]([ExtResource("5_m6ykv"), ExtResource("4_pu0km"), ExtResource("5_e2n4v"), ExtResource("6_6svqn"), ExtResource("7_c2sk2")])
 
 [node name="PlanningState" type="Node2D" parent="GameStateMachine"]
 script = ExtResource("2_82783")

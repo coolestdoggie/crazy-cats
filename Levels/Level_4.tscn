@@ -82,6 +82,9 @@ position = Vector2(-24, 68)
 [node name="Dynamic" type="Node2D" parent="Environment"]
 position = Vector2(-115, -25)
 
+[node name="Box" parent="Environment/Dynamic" instance=ExtResource("6_b05c0")]
+position = Vector2(243, -50)
+
 [node name="MilkObstacle" parent="Environment/Dynamic" instance=ExtResource("5_ywerj")]
 position = Vector2(189, 3)
 mass = 3.0
@@ -91,6 +94,3 @@ position = Vector2(-18, -55)
 
 [node name="Apple" parent="Environment/Dynamic" instance=ExtResource("5_fmsmo")]
 position = Vector2(48, 77)
-
-[node name="Box" parent="." instance=ExtResource("6_b05c0")]
-position = Vector2(128, -75)
