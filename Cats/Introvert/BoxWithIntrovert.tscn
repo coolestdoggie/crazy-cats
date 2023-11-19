@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://puuhi10yh0sb"]
+[gd_scene load_steps=8 format=3 uid="uid://puuhi10yh0sb"]
 
 [ext_resource type="Script" path="res://LevelObjects/LevelObject.gd" id="1_o28dk"]
 [ext_resource type="PackedScene" uid="uid://cc8o5gttf7vtx" path="res://Cats/Introvert/Box.tscn" id="1_r04in"]
 [ext_resource type="PackedScene" uid="uid://ckutn3iptp7ke" path="res://Cats/Introvert/Introvert.tscn" id="2_pak3h"]
+[ext_resource type="Texture2D" uid="uid://3fkt083loyk8" path="res://Cats/Introvert/box.png" id="3_tafam"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_g8b3g"]
 
@@ -22,9 +23,16 @@ color_overlay = NodePath("Box/Introvert/AnimatedSprite2D/Mask")
 
 [node name="Box" parent="." instance=ExtResource("1_r04in")]
 
+[node name="Sprite2D2" type="Sprite2D" parent="Box"]
+show_behind_parent = true
+position = Vector2(-1, -6)
+texture = ExtResource("3_tafam")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+
 [node name="Introvert" parent="Box" instance=ExtResource("2_pak3h")]
 show_behind_parent = true
-position = Vector2(0, -8)
+position = Vector2(-1, -8)
 
 [node name="AnimatedSprite2D" parent="Box/Introvert" index="1"]
 clip_children = 2
