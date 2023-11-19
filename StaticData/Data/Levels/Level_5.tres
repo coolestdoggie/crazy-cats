@@ -6,6 +6,5 @@
 script = ExtResource("1_rn4on")
 level_index = 0
 draggables_by_count = {
-"eater": 1,
-"introvert": 1
+"pusher": 1
 }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bqbbpcvq4ncjy"]
+[gd_scene load_steps=9 format=3 uid="uid://bqbbpcvq4ncjy"]
 
 [ext_resource type="PackedScene" uid="uid://vaxblbt1cguo" path="res://LevelObjects/Static/Platform/Platform.tscn" id="1_2wlmv"]
 [ext_resource type="PackedScene" uid="uid://h7ki5opejbw4" path="res://Cats/Finisher/Finisher.tscn" id="2_nm8ct"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://bouomcgdm8t0d" path="res://LevelObjects/Dynamic/DynamicPlatform.tscn" id="5_ogk1w"]
 [ext_resource type="PackedScene" uid="uid://pnwmpuhoxync" path="res://LevelObjects/Dynamic/Food/Cake.tscn" id="6_atwgq"]
 [ext_resource type="PackedScene" uid="uid://g1ldemah70t2" path="res://LevelObjects/Dynamic/Food/SwingTriangle.tscn" id="7_p8uuu"]
-[ext_resource type="PackedScene" uid="uid://c02hoc5wj15nx" path="res://Cats/Pusher/Pusher.tscn" id="7_qt54l"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_022ln"]
 load_path = "res://.godot/imported/Platform_Uncolored.png-d2ac8a493adfd9242144b7daf613f593.ctex"
@@ -65,10 +64,6 @@ scale = Vector2(1.08, 1)
 [node name="Platform11" parent="Environment/Static" instance=ExtResource("1_2wlmv")]
 position = Vector2(28, 68)
 scale = Vector2(0.6, 1)
-
-[node name="Pusher" parent="Environment/Static" instance=ExtResource("7_qt54l")]
-position = Vector2(-131, -78)
-impulse_force = 1000.0
 
 [node name="Finisher" parent="Environment/Static" instance=ExtResource("2_nm8ct")]
 position = Vector2(47, 52)

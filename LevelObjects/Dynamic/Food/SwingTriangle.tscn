@@ -14,4 +14,5 @@ scale = Vector2(0.2, 0.2)
 texture = SubResource("CompressedTexture2D_f8mqk")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-6, 6, 6, 6, 0, -6)
+build_mode = 1
+polygon = PackedVector2Array(-6, 6, 6, 6, 0, -8)
