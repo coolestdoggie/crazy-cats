@@ -78,7 +78,7 @@ position = Vector2(-115, -25)
 position = Vector2(7, 59)
 
 [node name="FatCat" parent="Environment/Dynamic" instance=ExtResource("3_b3cgp")]
-position = Vector2(7, -46)
+position = Vector2(7, -52)
 
 [node name="DynamicPlatform" parent="Environment/Dynamic" instance=ExtResource("5_ogk1w")]
 position = Vector2(-28, 65)

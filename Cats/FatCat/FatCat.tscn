@@ -1,27 +1,55 @@
-[gd_scene load_steps=6 format=3 uid="uid://cqu8bbbic337r"]
+[gd_scene load_steps=8 format=3 uid="uid://cqu8bbbic337r"]
 
 [ext_resource type="PackedScene" uid="uid://bfmguh88h5m7h" path="res://LevelObjects/Dynamic/LevelObject.tscn" id="1_xwt5i"]
-[ext_resource type="Texture2D" uid="uid://td0rtxabkg6u" path="res://LevelObjects/Dynamic/Balls/Images/football.png" id="2_ii4xu"]
+[ext_resource type="Texture2D" uid="uid://do8swo3y412gw" path="res://Cats/FatCat/fat_cat.png" id="2_pcgbf"]
+[ext_resource type="FontFile" uid="uid://d4npeibw4v0w4" path="res://UI/Fonts/Fipps-Regular.otf" id="3_kdlol"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u6hmc"]
 bounce = 0.3
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_28vvj"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_vi8po"]
-radius = 9.00347
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x5ms8"]
+height = 32.0
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_jr48a"]
+viewport_path = NodePath("SubViewport")
 
 [node name="FatCat" groups=["fat_cat"] instance=ExtResource("1_xwt5i")]
-mass = 60.0
+mass = 20.0
 physics_material_override = SubResource("PhysicsMaterial_u6hmc")
 
 [node name="Sprite2D" parent="." index="0"]
-position = Vector2(0, 0)
-scale = Vector2(0.287, 0.292)
-texture = ExtResource("2_ii4xu")
+position = Vector2(0, -1)
+scale = Vector2(1, 1)
+texture = ExtResource("2_pcgbf")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
 
 [node name="Mask" parent="Sprite2D" index="0"]
 texture = SubResource("CanvasTexture_28vvj")
 
 [node name="CollisionShape2D" parent="." index="1"]
-shape = SubResource("CircleShape2D_vi8po")
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_x5ms8")
+
+[node name="SubViewport" type="SubViewport" parent="." index="2"]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(128, 128)
+
+[node name="Label" type="Label" parent="SubViewport" index="0"]
+offset_right = 128.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_kdlol")
+theme_override_font_sizes/font_size = 8
+text = "z"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." index="3"]
+position = Vector2(23, 6)
+lifetime = 4.0
+texture = SubResource("ViewportTexture_jr48a")
+gravity = Vector2(0, -50)
+scale_amount_min = 0.3
+scale_amount_max = 0.5
